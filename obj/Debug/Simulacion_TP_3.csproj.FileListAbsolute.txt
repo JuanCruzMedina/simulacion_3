@@ -1,0 +1,4 @@
+C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.FrmPrincipal.resources
+C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.Properties.Resources.resources
+C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.csproj.GenerateResource.cache
+C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.csproj.CoreCompileInputs.cache
