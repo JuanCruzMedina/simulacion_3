@@ -1,8 +1,9 @@
 ﻿using Simulacion_TP_3.Clases;
 using System;
+using System.Collections.Generic;
 using static System.Math;
 
-namespace TP3.Distribuciones
+namespace TP3.Clases
 {
     public class ExponencialNegativa : Distribucion
     {
@@ -18,6 +19,6 @@ namespace TP3.Distribuciones
         public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior) => (float)((_Lambda * Math.Exp(-_Lambda * mc)) * (limiteSuperior - limiteInferior));
         public override int ObtenerDatosEmpiricos() => default;
         public override string ObtenerNombre() => "Exponencial Negativa";
-        public override Parametros ObtenerParametros() => Parametros.Lambda | Parametros.Media;
+        public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.Lambda };
     }
 }

@@ -1,7 +1,8 @@
 ﻿using Simulacion_TP_3.Clases;
 using System;
+using System.Collections.Generic;
 
-namespace TP3.Distribuciones
+namespace TP3.Clases
 {
     public class Uniforme : Distribucion
     {
@@ -19,6 +20,6 @@ namespace TP3.Distribuciones
         public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior) => (float)Math.Round(((float)((limiteSuperior - limiteInferior) / (_B - _A))), 4);
         public override int ObtenerDatosEmpiricos() => default;
         public override string ObtenerNombre() => "Uniforme";
-        public override Parametros ObtenerParametros() => Parametros.VariableA | Parametros.VariableB;
+        public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.VariableA, Parametros.VariableB };
     }
 }

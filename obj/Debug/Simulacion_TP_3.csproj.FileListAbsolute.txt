@@ -2,3 +2,12 @@ C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.FrmPrincip
 C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.Properties.Resources.resources
 C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.csproj.GenerateResource.cache
 C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.csproj.CoreCompileInputs.cache
+C:\Users\juan_\source\repos\Simulacion_TP_3\bin\Debug\Simulacion_TP_3.exe.config
+C:\Users\juan_\source\repos\Simulacion_TP_3\bin\Debug\Simulacion_TP_3.exe
+C:\Users\juan_\source\repos\Simulacion_TP_3\bin\Debug\Simulacion_TP_3.pdb
+C:\Users\juan_\source\repos\Simulacion_TP_3\bin\Debug\MathNet.Numerics.dll
+C:\Users\juan_\source\repos\Simulacion_TP_3\bin\Debug\MathNet.Numerics.xml
+C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.csproj.CopyComplete
+C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.exe
+C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.pdb
+C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.csproj.AssemblyReference.cache

@@ -1,7 +1,8 @@
 ﻿using Simulacion_TP_3.Clases;
 using System;
+using System.Collections.Generic;
 
-namespace TP3.Distribuciones
+namespace TP3.Clases
 {
     public class PoissonDis : Distribucion
     {
@@ -32,6 +33,6 @@ namespace TP3.Distribuciones
         }
         public override int ObtenerDatosEmpiricos() => default;
         public override string ObtenerNombre() => " de Poisson";
-        public override Parametros ObtenerParametros() => Parametros.Lambda | Parametros.Media;
+        public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.Lambda };
     }
 }
