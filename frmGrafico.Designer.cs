@@ -135,22 +135,22 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(75, 97);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 15);
+            this.label11.Size = new System.Drawing.Size(85, 13);
             this.label11.TabIndex = 14;
             this.label11.Text = "SubIntervalos";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(44, 133);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 15);
+            this.label12.Size = new System.Drawing.Size(114, 13);
             this.label12.TabIndex = 15;
             this.label12.Text = "Nivel de Confianza";
             // 
@@ -200,6 +200,7 @@
             this.btnProbar.TabIndex = 13;
             this.btnProbar.Text = "Calcular chi";
             this.btnProbar.UseVisualStyleBackColor = true;
+            this.btnProbar.Click += new System.EventHandler(this.btnProbar_Click);
             // 
             // chFE
             // 

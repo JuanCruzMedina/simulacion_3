@@ -32,7 +32,11 @@ namespace TP3.Clases
             return probabilidad;
         }
         public override int ObtenerDatosEmpiricos() => default;
-        public override string ObtenerNombre() => " de Poisson";
         public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.Lambda };
+
+        public override bool CalcularChi(List<Iteracion> variables, int cantInt)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

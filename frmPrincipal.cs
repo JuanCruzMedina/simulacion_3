@@ -144,6 +144,7 @@ namespace Simulacion_TP_3
         private void btnGenerarGraficos_Click(object sender, EventArgs e)
         {
             frmGrafico graf = new frmGrafico(_dataSource,_distribucion);
+            graf.ShowDialog();
         }
     }
     enum Distribucion

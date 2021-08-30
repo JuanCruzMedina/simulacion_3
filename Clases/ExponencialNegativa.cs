@@ -18,7 +18,10 @@ namespace TP3.Clases
         public override double ObtenerVariableAleatoria() => -(1 / _Lambda) * Log(1.0 - _Random.NextDouble());
         public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior) => (float)((_Lambda * Math.Exp(-_Lambda * mc)) * (limiteSuperior - limiteInferior));
         public override int ObtenerDatosEmpiricos() => default;
-        public override string ObtenerNombre() => "Exponencial Negativa";
         public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.Lambda };
+        public override bool CalcularChi(List<Iteracion> variables, int cantInt)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

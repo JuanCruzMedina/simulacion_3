@@ -124,7 +124,6 @@ namespace Simulacion_TP_3
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(117, 44);
             this.panel4.TabIndex = 2;
-            this.panel4.Visible = false;
             // 
             // btnGenerarGraficos
             // 

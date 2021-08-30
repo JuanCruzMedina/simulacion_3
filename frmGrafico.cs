@@ -31,18 +31,19 @@ namespace Simulacion_TP_3
             TestChi();
         }
 
-        private void CargarGrillaChi(DataGridView grilla, IDistribucion lista)
+        private void CargarGrillaChi(DataGridView grilla)
         {
             grilla.Rows.Clear();
             string intervalo;
-            for (int i = 0; i < lista.intervalos.Length; i++)
+            Clases.Distribucion distribucion = _distribucion as Clases.Distribucion;
+            for (int i = 0; i < distribucion.intervalos.Length; i++)
             {
-                intervalo = Convert.ToDouble(lista.intervalos[i, 0].ToString("#.00")) + " - " + Convert.ToDouble(lista.intervalos[i, 1].ToString("#.00"));
+                intervalo = Convert.ToDouble(distribucion.intervalos[i, 0].ToString("#.00")) + " - " + Convert.ToDouble(distribucion.intervalos[i, 1].ToString("#.00"));
                 var intv = intervalo;
-                var _fo = Convert.ToDouble(lista.fo[i].ToString("#.00"));
-                var _fe = Convert.ToDouble(lista.fe[i].ToString("#.00"));
-                var _c = Convert.ToDouble(lista.c[i].ToString("#.00"));
-                var _cac = Convert.ToDouble(lista.cac[i].ToString("#.00"));
+                var _fo = Convert.ToDouble(distribucion.fo[i].ToString("#.00"));
+                var _fe = Convert.ToDouble(distribucion.fe[i].ToString("#.00"));
+                var _c = Convert.ToDouble(distribucion.c[i].ToString("#.00"));
+                var _cac = Convert.ToDouble(distribucion.cac[i].ToString("#.00"));
                 grilla.Rows.Add(intv, _fo, _fe, _c, _cac);
             }
             dgvChi.Refresh();
@@ -52,12 +53,12 @@ namespace Simulacion_TP_3
         {
             try
             {
-                int k = Convert.ToInt32(txt_intervalos);
+                int k = Convert.ToInt32(txt_intervalos.Text);
                 dgvChi.DataSource = null;
                 bool rechazada = _distribucion.CalcularChi(_dataSource, k);
-                CargarGrillaChi(dgvChi, _distribucion);
-
-                string msg = "Resultado: Con los grados de libertad " + (k - 1) + " se obtuvo un valor calculado de " + (_distribucion.cac[_distribucion.cac.Length - 1]) + ".\nSe obtuvo un valor crítico de " + _distribucion.valorCritico + ", por lo tanto, la hipótesis ";
+                CargarGrillaChi(dgvChi);
+                Clases.Distribucion distribucion = _distribucion as Clases.Distribucion;
+                string msg = "Resultado: Con los grados de libertad " + (k - 1) + " se obtuvo un valor calculado de " + (distribucion.cac[distribucion.cac.Length - 1]) + ".\nSe obtuvo un valor crítico de " + distribucion.valorCritico + ", por lo tanto, la hipótesis ";
                 if (rechazada) msg += "fue rechazada";
                 else msg += "no puede ser rechazada";
                 /*lblResultado.Text = msg;
@@ -65,7 +66,6 @@ namespace Simulacion_TP_3
                 lblResultado.ForeColor = Color.FromArgb(255, 255, 255);
                 */
                 return rechazada;
-
             }
             catch (Exception ex)
             {

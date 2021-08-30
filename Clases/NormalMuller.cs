@@ -29,8 +29,11 @@ namespace TP3.Clases
         }
         public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior) => (float)(((Math.Exp((-0.5) * Math.Pow(((mc - _Media) / _DesviacionEstandar), 2))) / (_DesviacionEstandar * Sqrt(2 * PI))) * (limiteSuperior - limiteInferior));
         public override int ObtenerDatosEmpiricos() => 2;
-        public override string ObtenerNombre() => "Normal";
-        public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.DesviacionEstandar ,Parametros.Media };
+        public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.DesviacionEstandar, Parametros.Media };
 
+        public override bool CalcularChi(List<Iteracion> variables, int cantInt)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
