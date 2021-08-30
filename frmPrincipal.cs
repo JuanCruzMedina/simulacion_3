@@ -119,6 +119,8 @@ namespace Simulacion_TP_3
 
             return resultado;
         }
+
+       
         #endregion
 
         private void BtnGenerar_Click(object sender, EventArgs e)
@@ -137,6 +139,11 @@ namespace Simulacion_TP_3
             LimpiarCampos();
             EstablecerDistribucion();
             HabilitarParametros();
+        }
+
+        private void btnGenerarGraficos_Click(object sender, EventArgs e)
+        {
+            frmGrafico graf = new frmGrafico(_dataSource,_distribucion);
         }
     }
     enum Distribucion

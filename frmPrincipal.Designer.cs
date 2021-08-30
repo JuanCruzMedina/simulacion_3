@@ -103,7 +103,7 @@ namespace Simulacion_TP_3
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(575, 56);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Generador de Números Aleatorios";
+            this.lblTitulo.Text = "Generador de Variables Aleatorias";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pInferior
@@ -134,6 +134,7 @@ namespace Simulacion_TP_3
             this.btnGenerarGraficos.TabIndex = 0;
             this.btnGenerarGraficos.Text = "Generar Gráficos";
             this.btnGenerarGraficos.UseVisualStyleBackColor = true;
+            this.btnGenerarGraficos.Click += new System.EventHandler(this.btnGenerarGraficos_Click);
             // 
             // panel3
             // 
@@ -433,7 +434,7 @@ namespace Simulacion_TP_3
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Números Aleatorios";
+            this.Text = "Variables Aleatorias";
             this.pSuperior.ResumeLayout(false);
             this.pInferior.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

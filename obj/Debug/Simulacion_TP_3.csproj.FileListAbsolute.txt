@@ -11,3 +11,16 @@ C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.csproj.Cop
 C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.exe
 C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.pdb
 C:\Users\juan_\source\repos\Simulacion_TP_3\obj\Debug\Simulacion_TP_3.csproj.AssemblyReference.cache
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\bin\Debug\Simulacion_TP_3.exe.config
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\bin\Debug\Simulacion_TP_3.exe
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\bin\Debug\Simulacion_TP_3.pdb
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\bin\Debug\MathNet.Numerics.dll
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\bin\Debug\MathNet.Numerics.xml
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\obj\Debug\Simulacion_TP_3.csprojAssemblyReference.cache
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\obj\Debug\Simulacion_TP_3.FrmPrincipal.resources
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\obj\Debug\Simulacion_TP_3.Properties.Resources.resources
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\obj\Debug\Simulacion_TP_3.csproj.GenerateResource.cache
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\obj\Debug\Simulacion_TP_3.csproj.CoreCompileInputs.cache
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\obj\Debug\Simulacion_TP_3.csproj.CopyComplete
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\obj\Debug\Simulacion_TP_3.exe
+C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\obj\Debug\Simulacion_TP_3.pdb
