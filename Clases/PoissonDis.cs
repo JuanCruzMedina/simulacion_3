@@ -17,7 +17,11 @@ namespace TP3.Clases
             _Random = new Random();
             _valoresCriticos = new Dictionary<int, double>();
         }
-        public override double ObtenerVariableAleatoria()
+        public override string ObtenerNombre()
+        {
+            return "Poisson";
+        }
+        public override double?[] ObtenerVariableAleatoria()
         {
             double p = 1, x = -1, a = Math.Exp(-_Lambda);
             do
@@ -27,7 +31,9 @@ namespace TP3.Clases
                 x += 1;
             }
             while (p >= a);
-            return (int)x;
+            var variable = new double?[1];
+            variable[0] = x;
+            return variable;
         }
         public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior)
         {

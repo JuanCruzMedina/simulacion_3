@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvChi = new System.Windows.Forms.DataGridView();
             this.inf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +50,7 @@
             this.chFE = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chFO = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblResultado = new System.Windows.Forms.Label();
+            this.lblDist = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFO)).BeginInit();
@@ -203,10 +204,10 @@
             // 
             // chFE
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chFE.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chFE.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chFE.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chFE.Legends.Add(legend3);
             this.chFE.Location = new System.Drawing.Point(21, 459);
             this.chFE.Name = "chFE";
             this.chFE.Size = new System.Drawing.Size(461, 310);
@@ -215,10 +216,10 @@
             // 
             // chFO
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chFO.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chFO.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chFO.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chFO.Legends.Add(legend4);
             this.chFO.Location = new System.Drawing.Point(569, 459);
             this.chFO.Name = "chFO";
             this.chFO.Size = new System.Drawing.Size(461, 310);
@@ -233,12 +234,24 @@
             this.lblResultado.Size = new System.Drawing.Size(0, 13);
             this.lblResultado.TabIndex = 18;
             // 
+            // lblDist
+            // 
+            this.lblDist.AutoSize = true;
+            this.lblDist.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDist.Location = new System.Drawing.Point(689, 58);
+            this.lblDist.Name = "lblDist";
+            this.lblDist.Size = new System.Drawing.Size(100, 20);
+            this.lblDist.TabIndex = 19;
+            this.lblDist.Text = "Distribución: ";
+            // 
             // frmGrafico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1068, 835);
+            this.Controls.Add(this.lblDist);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.chFO);
             this.Controls.Add(this.chFE);
@@ -282,5 +295,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fe;
         private System.Windows.Forms.DataGridViewTextBoxColumn cac;
         private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Label lblDist;
     }
 }

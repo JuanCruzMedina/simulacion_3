@@ -19,8 +19,16 @@ namespace TP3.Clases
             _Random = new Random();
             _valoresCriticos = new Dictionary<int, double>();
         }
-
-        public override double ObtenerVariableAleatoria() => -(1 / _Lambda) * Log(1.0 - _Random.NextDouble());
+        public override string ObtenerNombre()
+        {
+            return "Exponencial negativa";
+        }
+        public override double?[] ObtenerVariableAleatoria() {
+            double?[] vector = new double?[1];
+            var x = -(1 / _Lambda) * Log(1.0 - _Random.NextDouble());
+            vector[0] = x;
+            return vector;
+        }
         public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior) => (float)((_Lambda * Math.Exp(-_Lambda * mc)) * (limiteSuperior - limiteInferior));
         public override int ObtenerDatosEmpiricos() => default;
         public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.Lambda };

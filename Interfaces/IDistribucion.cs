@@ -5,7 +5,8 @@ namespace Simulacion_TP_3.Interfaces
 {
     public interface IDistribucion
     {
-        double ObtenerVariableAleatoria();
+        string ObtenerNombre();
+        double?[] ObtenerVariableAleatoria();
         float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior);
         int ObtenerDatosEmpiricos();
         double[,] ObtenerIntervalos();

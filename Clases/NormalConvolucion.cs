@@ -20,14 +20,21 @@ namespace TP3.Clases
             _Random = new Random();
             _valoresCriticos = new Dictionary<int, double>();
         }
-        public override double ObtenerVariableAleatoria()
+        public override string ObtenerNombre()
+        {
+            return "Normal convolución";
+        }
+        public override double?[] ObtenerVariableAleatoria()
         {
             double ac = 0.0;
             for (int i = 0; i < 12; i++) ac += _Random.NextDouble();
             ac -= 6.0;
             double x = ac * _desviacionEstandar + _media;
-            return x;
+            double?[] vector = new double?[1];
+            vector[0] = x;
+            return vector;
         }
+
         public override float CalcularProbabilidad(double mc, double desde, double hasta) => (float)(((Math.Exp((-0.5) * Math.Pow(((mc - _media) / _desviacionEstandar), 2))) / (_desviacionEstandar * Sqrt(2 * PI))) * (hasta - desde));
         public override int ObtenerDatosEmpiricos() => 2;
         public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.DesviacionEstandar, Parametros.Media };

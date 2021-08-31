@@ -130,7 +130,11 @@ namespace Simulacion_TP_3
             EstablecerDistribucion(false);
             _cantidadNumeros = int.TryParse(txtN.Text, out int n) ? n : 0;
             for (int i = 1; i <= _cantidadNumeros; i++)
-                _dataSource.Add(new Iteracion(i, Math.Round(_distribucion.ObtenerVariableAleatoria(), _cantidadDecimales)));
+            {
+                var vector = _distribucion.ObtenerVariableAleatoria();
+                _dataSource.Add(new Iteracion(i, Math.Round((double)vector[0], _cantidadDecimales)));
+                if(vector.Length == 2) _dataSource.Add(new Iteracion(i, Math.Round((double)vector[1], _cantidadDecimales)));
+            }
             dgv.DataSource = _dataSource;
             btnGenerarGraficos.Enabled = true;
             dgv.Refresh();

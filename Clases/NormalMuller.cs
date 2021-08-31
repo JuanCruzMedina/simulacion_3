@@ -13,7 +13,7 @@ namespace TP3.Clases
         private readonly Dictionary<int, double> _valoresCriticos;
         public double salto;
         public bool rechazada;
-        double[] vector;
+
         public NormalMuller(double media, double desviacionEstandar)
         {
             _Media = media;
@@ -21,17 +21,20 @@ namespace TP3.Clases
             _Random = new Random();
             _valoresCriticos = new Dictionary<int, double>();
         }
-
-        public override double ObtenerVariableAleatoria()
+        public override string ObtenerNombre()
         {
-            vector = new double[2];
+            return "Normal";
+        }
+        public override double?[] ObtenerVariableAleatoria()
+        {
+            double?[] vector = new double?[2];
             double RND1 = _Random.NextDouble(),
             RND2 = _Random.NextDouble(),
             x = Sqrt(-2 * Log(RND1)) * Cos(2 * PI * RND2),
             y = Sqrt(-2 * Log(RND1)) * Sin(2 * PI * RND2);
             vector[0] = x * _DesviacionEstandar + _Media;
             vector[1] = y * _DesviacionEstandar + _Media;
-            return vector[0];
+            return vector;
         }
         public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior) => (float)(((Math.Exp((-0.5) * Math.Pow(((mc - _Media) / _DesviacionEstandar), 2))) / (_DesviacionEstandar * Sqrt(2 * PI))) * (limiteSuperior - limiteInferior));
         public override int ObtenerDatosEmpiricos() => 2;

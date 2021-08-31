@@ -16,10 +16,10 @@ namespace Simulacion_TP_3.Clases
         public double[] cac { get; set; }
         public double[] prob { get; set; }
         public double valorCritico { get; set; }
-
+        public abstract string ObtenerNombre();
         public abstract float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior);
         public abstract int ObtenerDatosEmpiricos();
-        public abstract double ObtenerVariableAleatoria();
+        public abstract double?[] ObtenerVariableAleatoria();
         public abstract List<Parametros> ObtenerParametros();
         public double[,] ObtenerIntervalos() => intervalos;
         public abstract bool CalcularChi(List<Iteracion> variables, int cantInt);

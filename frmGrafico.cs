@@ -25,6 +25,7 @@ namespace Simulacion_TP_3
             InitializeComponent();
             this._dataSource = dataSource;
             this._distribucion = dist;
+            lblDist.Text += dist.ObtenerNombre();
         }
 
         private void btnProbar_Click(object sender, EventArgs e)
