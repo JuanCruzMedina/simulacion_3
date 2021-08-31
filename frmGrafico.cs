@@ -15,7 +15,8 @@ namespace Simulacion_TP_3
 {
     public partial class frmGrafico : Form
     {
-        private double[] intv, valuesFE, valuesFO;
+        private double[] valuesFE, valuesFO;
+        private double[,] intv;
         private List<Iteracion> _dataSource;
         private IDistribucion _distribucion;
 
@@ -34,17 +35,21 @@ namespace Simulacion_TP_3
         private void CargarGrillaChi(DataGridView grilla)
         {
             grilla.Rows.Clear();
-            string intervalo;
             Clases.Distribucion distribucion = _distribucion as Clases.Distribucion;
-            for (int i = 0; i < distribucion.intervalos.Length; i++)
+            this.intv = distribucion.intervalos;
+            this.valuesFE= distribucion.fe;
+            this.valuesFO = distribucion.fo;
+            for (int i = 0; i < distribucion.intervalos.GetLength(0); i++)
             {
-                intervalo = Convert.ToDouble(distribucion.intervalos[i, 0].ToString("#.00")) + " - " + Convert.ToDouble(distribucion.intervalos[i, 1].ToString("#.00"));
-                var intv = intervalo;
+                var _inf = Convert.ToDouble(distribucion.intervalos[i, 0].ToString("#.00"));
+                var _sup = Convert.ToDouble(distribucion.intervalos[i, 1].ToString("#.00"));
                 var _fo = Convert.ToDouble(distribucion.fo[i].ToString("#.00"));
+                var _p = Convert.ToDouble(distribucion.prob[i].ToString("#.00"));
+                var _medio = Convert.ToDouble(((distribucion.intervalos[i, 0] + distribucion.intervalos[i, 1]) / 2).ToString("#.00"));
                 var _fe = Convert.ToDouble(distribucion.fe[i].ToString("#.00"));
-                var _c = Convert.ToDouble(distribucion.c[i].ToString("#.00"));
                 var _cac = Convert.ToDouble(distribucion.cac[i].ToString("#.00"));
-                grilla.Rows.Add(intv, _fo, _fe, _c, _cac);
+                //var _cac = Convert.ToDouble(distribucion.cac[i].ToString("#.00"));
+                grilla.Rows.Add(_inf, _sup, _medio, _fo, _p, _fe, _cac);
             }
             dgvChi.Refresh();
         }
@@ -53,18 +58,21 @@ namespace Simulacion_TP_3
         {
             try
             {
+                lblResultado.Visible = false;
                 int k = Convert.ToInt32(txt_intervalos.Text);
                 dgvChi.DataSource = null;
                 bool rechazada = _distribucion.CalcularChi(_dataSource, k);
                 CargarGrillaChi(dgvChi);
                 Clases.Distribucion distribucion = _distribucion as Clases.Distribucion;
-                string msg = "Resultado: Con los grados de libertad " + (k - 1) + " se obtuvo un valor calculado de " + (distribucion.cac[distribucion.cac.Length - 1]) + ".\nSe obtuvo un valor crítico de " + distribucion.valorCritico + ", por lo tanto, la hipótesis ";
+                string msg = "Resultado: Con los grados de libertad " + (k - 1) + " se obtuvo un valor calculado de " + (distribucion.cac[k - 1]) + ".\nSe obtuvo un valor crítico de " + distribucion.valorCritico + ", por lo tanto, la hipótesis ";
                 if (rechazada) msg += "fue rechazada";
                 else msg += "no puede ser rechazada";
-                /*lblResultado.Text = msg;
+                lblResultado.Text = msg;
                 lblResultado.Font = new Font("gothic century", lblResultado.Font.Size);
-                lblResultado.ForeColor = Color.FromArgb(255, 255, 255);
-                */
+                lblResultado.ForeColor = Color.FromArgb(0, 0, 0);
+                lblResultado.Visible = true;
+
+                this.CargarGrafico();
                 return rechazada;
             }
             catch (Exception ex)
@@ -73,9 +81,15 @@ namespace Simulacion_TP_3
                 return false;
             }
         }
+
+        private void frmGrafico_Load(object sender, EventArgs e)
+        {
+            chFE.Titles.Add("Histograma de frecuencias esperadas");
+            chFO.Titles.Add("Histograma de frecuencias observadas");
+        }
+
         private void CargarGrafico()
         {
-            string intervalo;
             chFE.Series.Add("Serie1");
             chFO.Series.Add("Serie2");
             chFE.Series["Serie1"].Points.Clear();
@@ -86,18 +100,11 @@ namespace Simulacion_TP_3
             chFE.Series["Serie1"].LegendText = "Frecuencia esperada";
             chFO.Series["Serie2"].LegendText = "Frecuencia observada";
 
-            for (int i = 0; i < intv.Length; i++)
+            for (int i = 0; i < intv.GetLength(0); i++)
             {
-                if (i == 0) intervalo = "0 - " + Convert.ToDouble(intv[i].ToString("#.00"));
-                else intervalo = Convert.ToDouble(intv[i - 1].ToString("#.00")) + " - " + Convert.ToDouble(intv[i].ToString("#.00"));
-                chFE.Series["Serie1"].Points.AddXY(intervalo, valuesFE[i]);
-            }
-
-            for (int i = 0; i < intv.Length; i++)
-            {
-                if (i == 0) intervalo = "0 - " + Convert.ToDouble(intv[i].ToString("#.00"));
-                else intervalo = Convert.ToDouble(intv[i - 1].ToString("#.00")) + " - " + Convert.ToDouble(intv[i].ToString("#.00"));
-                chFO.Series["Serie2"].Points.AddXY(intervalo, valuesFO[i]);
+                var inter = Convert.ToDouble(intv[i,0].ToString("#.00")) + " - " + Convert.ToDouble(intv[i,1].ToString("#.00"));
+                chFE.Series["Serie1"].Points.AddXY(inter, valuesFE[i]);
+                chFO.Series["Serie2"].Points.AddXY(inter, valuesFO[i]);
             }
         }
     }

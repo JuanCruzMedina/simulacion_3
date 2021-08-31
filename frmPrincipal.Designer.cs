@@ -127,6 +127,7 @@ namespace Simulacion_TP_3
             // 
             // btnGenerarGraficos
             // 
+            this.btnGenerarGraficos.Enabled = false;
             this.btnGenerarGraficos.Location = new System.Drawing.Point(3, 10);
             this.btnGenerarGraficos.Name = "btnGenerarGraficos";
             this.btnGenerarGraficos.Size = new System.Drawing.Size(107, 23);

@@ -27,7 +27,8 @@ namespace TP3.Clases
         public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior) => (float)Math.Round(((float)((limiteSuperior - limiteInferior) / (_B - _A))), 4);
         public override bool CalcularChi(List<Iteracion> variables, int cantIntervalos)
         {
-            CargarDiccionario();
+            if (_valoresCriticos.Count == 0)
+                CargarDiccionario();
             fo = new double[cantIntervalos];
             fe = new double[cantIntervalos];
             c = new double[cantIntervalos];
@@ -39,27 +40,27 @@ namespace TP3.Clases
             {
                 nums.Add(item.Valor);
             }
-            intervalos = calcularIntervalos(nums, cantIntervalos);
+            intervalos = CalcularIntervalos(nums, cantIntervalos);
 
             salto = nums.Max() / cantIntervalos;
-            for (int i = 0; i < intervalos.Length; i++)
+            for (int i = 0; i < intervalos.GetLength(0); i++)
             {
                 var valorMedio = (intervalos[i, 0] + intervalos[i, 1]) / 2;
                 prob[i] = this.CalcularProbabilidad(valorMedio, intervalos[i, 0], intervalos[i, 1]);
             }
 
             // Primero calculamos las frecuencias observadas
-            calcularFO(variables);
+            CalcularFO(variables);
             // Calculamos las frecuencias esperadas
-            calcularFE(variables);
+            CalcularFE(variables);
             // Obtenemos el estadistico acumulado
-            calcularEstadisticoPrueba();
+            CalcularEstadisticoPrueba();
             // Verificamos si se rechaza la hipotesis nula
-            testHipotesis(variables);
+            TestHipotesis(variables);
 
             return rechazada;
         }
-        private double[,] calcularIntervalos(List<double> numeros, int cantIntervalos)
+        private double[,] CalcularIntervalos(List<double> numeros, int cantIntervalos)
         {
             double max = numeros[0];
             double min = numeros[0];
@@ -86,15 +87,15 @@ namespace TP3.Clases
         }
 
         // Calcular Frecuencias Observadas
-        private void calcularFO(List<Iteracion> variables)
+        private void CalcularFO(List<Iteracion> variables)
         {
             // Vamos metiendo cada numero en el intervalo que corresponde
             foreach (Iteracion numero in variables)
             //double numero :variables
             {
-                for (int i = 0; i < this.intervalos.Length; i++)
+                for (int i = 0; i < intervalos.GetLength(0); i++)
                 {
-                    if (this.intervalos[i, 0] > numero.Valor && numero.Valor >= (this.intervalos[i, 1] - this.salto))
+                    if (this.intervalos[i, 0] < numero.Valor && numero.Valor <= this.intervalos[i, 1])
                     {
                         fo[i]++;
                         continue;
@@ -104,7 +105,7 @@ namespace TP3.Clases
         }
 
         // Calcular Frecuencias Esperadas
-        private void calcularFE(List<Iteracion> variables)
+        private void CalcularFE(List<Iteracion> variables)
         {
             for (int i = 0; i < this.fe.Length; i++)
             {
@@ -112,12 +113,12 @@ namespace TP3.Clases
             }
         }
 
-        private void calcularEstadisticoPrueba()
+        private void CalcularEstadisticoPrueba()
         {
             double valorAnt = 0;
             for (int i = 0; i < this.fe.Length; i++)
             {
-                this.c[i] = ((this.fe[i] - this.fo[i]) * (this.fe[i] - this.fo[i])) / this.fe[i];
+                this.c[i] = Math.Pow((this.fe[i] - this.fo[i]), 2) / this.fe[i];
                 valorAnt += this.c[i];
                 this.cac[i] = valorAnt;
             }
@@ -125,15 +126,14 @@ namespace TP3.Clases
 
         // Este metodo verifica si se puede rechazar o no la hipotesis nula
 
-        public void testHipotesis(List<Iteracion> variables)
+        public void TestHipotesis(List<Iteracion> variables)
         {
             int gradosLibertad;
-            if (intervalos.Length == 1) gradosLibertad = 1;
-            else gradosLibertad = intervalos.Length - 1;
-            Dictionary<int, double> valoresCriticos = new Dictionary<int, double>();
+            if (intervalos.GetLength(0) == 1) gradosLibertad = 1;
+            else gradosLibertad = intervalos.GetLength(0) - 1;
 
-            this.valorCritico = valoresCriticos[gradosLibertad];
-            this.rechazada = !(valoresCriticos[gradosLibertad] > cac[cac.Length - 1]);
+            this.valorCritico = _valoresCriticos[gradosLibertad];
+            this.rechazada = !(_valoresCriticos[gradosLibertad] > cac[cac.Length - 1]);
         }
 
         private void CargarDiccionario()

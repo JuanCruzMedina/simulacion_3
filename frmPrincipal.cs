@@ -132,6 +132,7 @@ namespace Simulacion_TP_3
             for (int i = 1; i <= _cantidadNumeros; i++)
                 _dataSource.Add(new Iteracion(i, Math.Round(_distribucion.ObtenerVariableAleatoria(), _cantidadDecimales)));
             dgv.DataSource = _dataSource;
+            btnGenerarGraficos.Enabled = true;
             dgv.Refresh();
         }
         private void CboDistribuciones_SelectedIndexChanged(object sender, EventArgs e)

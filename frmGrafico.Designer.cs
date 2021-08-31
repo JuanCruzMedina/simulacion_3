@@ -30,10 +30,8 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvChi = new System.Windows.Forms.DataGridView();
             this.inf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +40,7 @@
             this.fo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.p = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_confianza = new System.Windows.Forms.MaskedTextBox();
@@ -51,6 +49,7 @@
             this.btnProbar = new System.Windows.Forms.Button();
             this.chFE = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chFO = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblResultado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFO)).BeginInit();
@@ -83,7 +82,7 @@
             this.fo,
             this.p,
             this.fe,
-            this.c});
+            this.cac});
             this.dgvChi.Location = new System.Drawing.Point(337, 94);
             this.dgvChi.Name = "dgvChi";
             this.dgvChi.ReadOnly = true;
@@ -126,11 +125,11 @@
             this.fe.Name = "fe";
             this.fe.ReadOnly = true;
             // 
-            // c
+            // cac
             // 
-            this.c.HeaderText = "c";
-            this.c.Name = "c";
-            this.c.ReadOnly = true;
+            this.cac.HeaderText = "c(ac)";
+            this.cac.Name = "cac";
+            this.cac.ReadOnly = true;
             // 
             // label11
             // 
@@ -210,10 +209,6 @@
             this.chFE.Legends.Add(legend1);
             this.chFE.Location = new System.Drawing.Point(21, 459);
             this.chFE.Name = "chFE";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chFE.Series.Add(series1);
             this.chFE.Size = new System.Drawing.Size(461, 310);
             this.chFE.TabIndex = 16;
             this.chFE.Text = "chart1";
@@ -226,20 +221,25 @@
             this.chFO.Legends.Add(legend2);
             this.chFO.Location = new System.Drawing.Point(569, 459);
             this.chFO.Name = "chFO";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chFO.Series.Add(series2);
             this.chFO.Size = new System.Drawing.Size(461, 310);
             this.chFO.TabIndex = 17;
             this.chFO.Text = "chart2";
+            // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Location = new System.Drawing.Point(53, 801);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(0, 13);
+            this.lblResultado.TabIndex = 18;
             // 
             // frmGrafico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1068, 791);
+            this.ClientSize = new System.Drawing.Size(1068, 835);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.chFO);
             this.Controls.Add(this.chFE);
             this.Controls.Add(this.label11);
@@ -253,6 +253,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmGrafico";
             this.Text = "Gráficos";
+            this.Load += new System.EventHandler(this.frmGrafico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFO)).EndInit();
@@ -271,14 +272,15 @@
         private System.Windows.Forms.MaskedTextBox txt_intervalos;
         private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.Button btnProbar;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chFE;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chFO;
         private System.Windows.Forms.DataGridViewTextBoxColumn inf;
         private System.Windows.Forms.DataGridViewTextBoxColumn sup;
         private System.Windows.Forms.DataGridViewTextBoxColumn medio;
         private System.Windows.Forms.DataGridViewTextBoxColumn fo;
         private System.Windows.Forms.DataGridViewTextBoxColumn p;
         private System.Windows.Forms.DataGridViewTextBoxColumn fe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chFE;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chFO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cac;
+        private System.Windows.Forms.Label lblResultado;
     }
 }
