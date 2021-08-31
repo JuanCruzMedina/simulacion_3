@@ -89,6 +89,11 @@ namespace Simulacion_TP_3
             chFO.Titles.Add("Histograma de frecuencias observadas");
         }
 
+        private void dgvChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void CargarGrafico()
         {
             chFE.Series.Add("Serie1");

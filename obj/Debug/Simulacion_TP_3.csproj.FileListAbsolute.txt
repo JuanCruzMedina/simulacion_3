@@ -39,3 +39,17 @@ C:\Users\juan_\source\repos\sim\simulacion_3\bin\Debug\MathNet.Numerics.dll
 C:\Users\juan_\source\repos\sim\simulacion_3\bin\Debug\MathNet.Numerics.xml
 C:\Users\juan_\source\repos\sim\simulacion_3\obj\Debug\Simulacion_TP_3.csproj.CopyComplete
 C:\Users\flor\Desktop\00facu\4to\Simulacion\TPS\TP3\simulacion_3\obj\Debug\Simulacion_TP_3.frmGrafico.resources
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\bin\Debug\Simulacion_TP_3.exe.config
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\bin\Debug\Simulacion_TP_3.exe
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\bin\Debug\Simulacion_TP_3.pdb
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\bin\Debug\MathNet.Numerics.dll
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\bin\Debug\MathNet.Numerics.xml
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.csprojAssemblyReference.cache
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.frmGrafico.resources
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.FrmPrincipal.resources
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.Properties.Resources.resources
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.csproj.GenerateResource.cache
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.csproj.CoreCompileInputs.cache
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.csproj.CopyComplete
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.exe
+C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.pdb
