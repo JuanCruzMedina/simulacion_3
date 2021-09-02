@@ -25,6 +25,13 @@ namespace Simulacion_TP_3
             InitializeComponent();
             this._dataSource = dataSource;
             this._distribucion = dist;
+            chFE.Titles.Add("Histograma de frecuencias esperadas");
+            chFO.Titles.Add("Histograma de frecuencias observadas");
+            chFE.Series.Add("Serie1");
+            chFO.Series.Add("Serie2");
+            chFE.Palette = ChartColorPalette.Berry;
+            chFE.Series["Serie1"].LegendText = "Frecuencia esperada";
+            chFO.Series["Serie2"].LegendText = "Frecuencia observada";
             lblDist.Text += dist.ObtenerNombre();
         }
 
@@ -38,7 +45,7 @@ namespace Simulacion_TP_3
             grilla.Rows.Clear();
             Clases.Distribucion distribucion = _distribucion as Clases.Distribucion;
             this.intv = distribucion.intervalos;
-            this.valuesFE= distribucion.fe;
+            this.valuesFE = distribucion.fe;
             this.valuesFO = distribucion.fo;
             for (int i = 0; i < distribucion.intervalos.GetLength(0); i++)
             {
@@ -83,34 +90,27 @@ namespace Simulacion_TP_3
             }
         }
 
-        private void frmGrafico_Load(object sender, EventArgs e)
-        {
-            chFE.Titles.Add("Histograma de frecuencias esperadas");
-            chFO.Titles.Add("Histograma de frecuencias observadas");
-        }
-
-        private void dgvChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void CargarGrafico()
         {
-            chFE.Series.Add("Serie1");
-            chFO.Series.Add("Serie2");
+            bool infinito = false;
             chFE.Series["Serie1"].Points.Clear();
             chFO.Series["Serie2"].Points.Clear();
-
-            chFE.Palette = ChartColorPalette.Berry;
-
-            chFE.Series["Serie1"].LegendText = "Frecuencia esperada";
-            chFO.Series["Serie2"].LegendText = "Frecuencia observada";
-
+            foreach (var item in valuesFE)
+            {
+                try
+                {
+                    var entero = Convert.ToInt32(item);
+                }
+                catch
+                {
+                    infinito = true;
+                }
+            }
             for (int i = 0; i < intv.GetLength(0); i++)
             {
-                var inter = Convert.ToDouble(intv[i,0].ToString("#.00")) + " - " + Convert.ToDouble(intv[i,1].ToString("#.00"));
-                chFE.Series["Serie1"].Points.AddXY(inter, valuesFE[i]);
+                var inter = Convert.ToDouble(intv[i, 0].ToString("#.00")) + " - " + Convert.ToDouble(intv[i, 1].ToString("#.00"));
                 chFO.Series["Serie2"].Points.AddXY(inter, valuesFO[i]);
+                if (!infinito) chFE.Series["Serie1"].Points.AddXY(inter, valuesFE[i]);
             }
         }
     }

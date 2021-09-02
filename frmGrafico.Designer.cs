@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvChi = new System.Windows.Forms.DataGridView();
             this.inf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,16 +59,15 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTitulo.Location = new System.Drawing.Point(-4, 0);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(1455, 71);
+            this.lblTitulo.Size = new System.Drawing.Size(952, 66);
             this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "            Gráficos";
+            this.lblTitulo.Text = "Gráficos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dgvChi
@@ -87,22 +86,20 @@
             this.p,
             this.fe,
             this.cac});
-            this.dgvChi.Location = new System.Drawing.Point(431, 116);
-            this.dgvChi.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvChi.Location = new System.Drawing.Point(265, 94);
             this.dgvChi.Name = "dgvChi";
             this.dgvChi.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChi.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvChi.RowHeadersWidth = 51;
-            this.dgvChi.Size = new System.Drawing.Size(943, 404);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChi.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvChi.RowHeadersWidth = 5;
+            this.dgvChi.Size = new System.Drawing.Size(673, 222);
             this.dgvChi.TabIndex = 9;
-            this.dgvChi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChi_CellContentClick);
             // 
             // inf
             // 
@@ -156,35 +153,35 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(107, 119);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label11.Location = new System.Drawing.Point(38, 94);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(118, 19);
+            this.label11.Size = new System.Drawing.Size(107, 17);
             this.label11.TabIndex = 14;
             this.label11.Text = "SubIntervalos";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label12.Location = new System.Drawing.Point(59, 164);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Location = new System.Drawing.Point(1, 130);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 19);
+            this.label12.Size = new System.Drawing.Size(144, 17);
             this.label12.TabIndex = 15;
             this.label12.Text = "Nivel de Confianza";
             // 
             // txt_confianza
             // 
             this.txt_confianza.Enabled = false;
-            this.txt_confianza.Location = new System.Drawing.Point(235, 160);
-            this.txt_confianza.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_confianza.Location = new System.Drawing.Point(153, 130);
+            this.txt_confianza.Margin = new System.Windows.Forms.Padding(4);
             this.txt_confianza.Mask = "99999";
             this.txt_confianza.Name = "txt_confianza";
-            this.txt_confianza.Size = new System.Drawing.Size(131, 22);
+            this.txt_confianza.Size = new System.Drawing.Size(99, 20);
             this.txt_confianza.TabIndex = 10;
             this.txt_confianza.Text = "95";
             this.txt_confianza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -192,11 +189,11 @@
             // 
             // txt_intervalos
             // 
-            this.txt_intervalos.Location = new System.Drawing.Point(235, 116);
-            this.txt_intervalos.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_intervalos.Location = new System.Drawing.Point(153, 94);
+            this.txt_intervalos.Margin = new System.Windows.Forms.Padding(4);
             this.txt_intervalos.Mask = "99999";
             this.txt_intervalos.Name = "txt_intervalos";
-            this.txt_intervalos.Size = new System.Drawing.Size(131, 22);
+            this.txt_intervalos.Size = new System.Drawing.Size(99, 20);
             this.txt_intervalos.TabIndex = 11;
             this.txt_intervalos.Text = "3";
             this.txt_intervalos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -207,12 +204,12 @@
             this.btnReiniciar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnReiniciar.FlatAppearance.BorderSize = 2;
             this.btnReiniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReiniciar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReiniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReiniciar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnReiniciar.Location = new System.Drawing.Point(235, 214);
-            this.btnReiniciar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnReiniciar.Location = new System.Drawing.Point(139, 174);
+            this.btnReiniciar.Margin = new System.Windows.Forms.Padding(4);
             this.btnReiniciar.Name = "btnReiniciar";
-            this.btnReiniciar.Size = new System.Drawing.Size(133, 34);
+            this.btnReiniciar.Size = new System.Drawing.Size(113, 28);
             this.btnReiniciar.TabIndex = 12;
             this.btnReiniciar.Text = "Reiniciar";
             this.btnReiniciar.UseVisualStyleBackColor = true;
@@ -222,12 +219,12 @@
             this.btnProbar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnProbar.FlatAppearance.BorderSize = 2;
             this.btnProbar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProbar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProbar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProbar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnProbar.Location = new System.Drawing.Point(71, 214);
-            this.btnProbar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnProbar.Location = new System.Drawing.Point(18, 174);
+            this.btnProbar.Margin = new System.Windows.Forms.Padding(4);
             this.btnProbar.Name = "btnProbar";
-            this.btnProbar.Size = new System.Drawing.Size(133, 34);
+            this.btnProbar.Size = new System.Drawing.Size(113, 28);
             this.btnProbar.TabIndex = 13;
             this.btnProbar.Text = "Calcular chi";
             this.btnProbar.UseVisualStyleBackColor = true;
@@ -239,14 +236,13 @@
             this.chFE.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
             this.chFE.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.chFE.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            chartArea1.Name = "ChartArea1";
-            this.chFE.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chFE.Legends.Add(legend1);
-            this.chFE.Location = new System.Drawing.Point(28, 565);
-            this.chFE.Margin = new System.Windows.Forms.Padding(4);
+            chartArea5.Name = "ChartArea1";
+            this.chFE.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chFE.Legends.Add(legend5);
+            this.chFE.Location = new System.Drawing.Point(10, 322);
             this.chFE.Name = "chFE";
-            this.chFE.Size = new System.Drawing.Size(615, 382);
+            this.chFE.Size = new System.Drawing.Size(461, 310);
             this.chFE.TabIndex = 16;
             this.chFE.Text = "chart1";
             // 
@@ -256,45 +252,42 @@
             this.chFO.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
             this.chFO.BackSecondaryColor = System.Drawing.Color.White;
             this.chFO.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            chartArea2.Name = "ChartArea1";
-            this.chFO.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chFO.Legends.Add(legend2);
-            this.chFO.Location = new System.Drawing.Point(759, 565);
-            this.chFO.Margin = new System.Windows.Forms.Padding(4);
+            chartArea6.Name = "ChartArea1";
+            this.chFO.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chFO.Legends.Add(legend6);
+            this.chFO.Location = new System.Drawing.Point(477, 322);
             this.chFO.Name = "chFO";
-            this.chFO.Size = new System.Drawing.Size(615, 382);
+            this.chFO.Size = new System.Drawing.Size(461, 310);
             this.chFO.TabIndex = 17;
             this.chFO.Text = "chart2";
             // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(71, 986);
-            this.lblResultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResultado.Location = new System.Drawing.Point(53, 801);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(0, 17);
+            this.lblResultado.Size = new System.Drawing.Size(0, 13);
             this.lblResultado.TabIndex = 18;
             // 
             // lblDist
             // 
             this.lblDist.AutoSize = true;
             this.lblDist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.lblDist.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDist.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblDist.Location = new System.Drawing.Point(919, 71);
-            this.lblDist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDist.Location = new System.Drawing.Point(262, 70);
             this.lblDist.Name = "lblDist";
-            this.lblDist.Size = new System.Drawing.Size(113, 19);
+            this.lblDist.Size = new System.Drawing.Size(104, 17);
             this.lblDist.TabIndex = 19;
             this.lblDist.Text = "Distribución: ";
             // 
             // frmGrafico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1424, 1028);
+            this.ClientSize = new System.Drawing.Size(952, 645);
             this.Controls.Add(this.lblDist);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.chFO);
@@ -308,11 +301,9 @@
             this.Controls.Add(this.dgvChi);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGrafico";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmGrafico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFO)).EndInit();

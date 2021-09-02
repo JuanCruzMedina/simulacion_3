@@ -120,7 +120,7 @@ namespace Simulacion_TP_3
             return resultado;
         }
 
-       
+
         #endregion
 
         private void BtnGenerar_Click(object sender, EventArgs e)
@@ -132,8 +132,9 @@ namespace Simulacion_TP_3
             for (int i = 1; i <= _cantidadNumeros; i++)
             {
                 var vector = _distribucion.ObtenerVariableAleatoria();
+                var valor1 = Math.Round((double)vector[0], _cantidadDecimales);
                 _dataSource.Add(new Iteracion(i, Math.Round((double)vector[0], _cantidadDecimales)));
-                if(vector.Length == 2) _dataSource.Add(new Iteracion(i, Math.Round((double)vector[1], _cantidadDecimales)));
+                if (vector.Length == 2) _dataSource.Add(new Iteracion(i, Math.Round((double)vector[1], _cantidadDecimales)));
             }
             dgv.DataSource = _dataSource;
             btnGenerarGraficos.Enabled = true;
@@ -148,7 +149,7 @@ namespace Simulacion_TP_3
 
         private void btnGenerarGraficos_Click(object sender, EventArgs e)
         {
-            frmGrafico graf = new frmGrafico(_dataSource,_distribucion);
+            frmGrafico graf = new frmGrafico(_dataSource, _distribucion);
             graf.ShowDialog();
         }
 

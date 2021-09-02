@@ -33,6 +33,7 @@ namespace Simulacion_TP_3
             this.pSuperior = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pInferior = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnGenerarGraficos = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -61,7 +62,6 @@ namespace Simulacion_TP_3
             this.cboDistribuciones = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
             this.indiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iteracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -91,22 +91,22 @@ namespace Simulacion_TP_3
             this.pSuperior.Controls.Add(this.lblTitulo);
             this.pSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pSuperior.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pSuperior.Margin = new System.Windows.Forms.Padding(5);
             this.pSuperior.Name = "pSuperior";
-            this.pSuperior.Size = new System.Drawing.Size(1160, 82);
+            this.pSuperior.Size = new System.Drawing.Size(839, 82);
             this.pSuperior.TabIndex = 0;
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(1161, 82);
+            this.lblTitulo.Size = new System.Drawing.Size(839, 82);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "                                       Generador de Variables Aleatorias";
+            this.lblTitulo.Text = "Generador de Variables Aleatorias";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
@@ -117,18 +117,30 @@ namespace Simulacion_TP_3
             this.pInferior.Controls.Add(this.panel4);
             this.pInferior.Controls.Add(this.panel3);
             this.pInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pInferior.Location = new System.Drawing.Point(0, 434);
-            this.pInferior.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pInferior.Location = new System.Drawing.Point(0, 387);
+            this.pInferior.Margin = new System.Windows.Forms.Padding(5);
             this.pInferior.Name = "pInferior";
-            this.pInferior.Size = new System.Drawing.Size(1160, 64);
+            this.pInferior.Size = new System.Drawing.Size(839, 64);
             this.pInferior.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(2, 5);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(421, 59);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "- Medina, Juan Cruz                 - Donalisio,Juan Pablo \r\n- Dagotto, Florencia" +
+    " Agustina   - Spini, Leila \r\n- Parrucci, Lara";
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btnGenerarGraficos);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(785, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel4.Location = new System.Drawing.Point(464, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(195, 64);
             this.panel4.TabIndex = 2;
@@ -153,8 +165,8 @@ namespace Simulacion_TP_3
             // 
             this.panel3.Controls.Add(this.btnGenerar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(980, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Location = new System.Drawing.Point(659, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(180, 64);
             this.panel3.TabIndex = 1;
@@ -166,7 +178,7 @@ namespace Simulacion_TP_3
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGenerar.Location = new System.Drawing.Point(5, 14);
-            this.btnGenerar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(5);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(164, 33);
             this.btnGenerar.TabIndex = 0;
@@ -178,7 +190,7 @@ namespace Simulacion_TP_3
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 82);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -191,9 +203,9 @@ namespace Simulacion_TP_3
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.splitContainer1.Panel2.Controls.Add(this.dgv);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Size = new System.Drawing.Size(1160, 352);
-            this.splitContainer1.SplitterDistance = 546;
-            this.splitContainer1.SplitterWidth = 6;
+            this.splitContainer1.Size = new System.Drawing.Size(839, 305);
+            this.splitContainer1.SplitterDistance = 396;
+            this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 2;
             // 
             // gbParametros
@@ -209,10 +221,10 @@ namespace Simulacion_TP_3
             this.gbParametros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbParametros.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gbParametros.Location = new System.Drawing.Point(0, 0);
-            this.gbParametros.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gbParametros.Margin = new System.Windows.Forms.Padding(5);
             this.gbParametros.Name = "gbParametros";
-            this.gbParametros.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.gbParametros.Size = new System.Drawing.Size(546, 352);
+            this.gbParametros.Padding = new System.Windows.Forms.Padding(5);
+            this.gbParametros.Size = new System.Drawing.Size(396, 305);
             this.gbParametros.TabIndex = 0;
             this.gbParametros.TabStop = false;
             this.gbParametros.Text = "Parámetros";
@@ -223,28 +235,28 @@ namespace Simulacion_TP_3
             this.pVariableN.Controls.Add(this.txtN);
             this.pVariableN.Controls.Add(this.label7);
             this.pVariableN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pVariableN.Location = new System.Drawing.Point(5, 267);
-            this.pVariableN.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pVariableN.Location = new System.Drawing.Point(5, 262);
+            this.pVariableN.Margin = new System.Windows.Forms.Padding(5);
             this.pVariableN.Name = "pVariableN";
-            this.pVariableN.Size = new System.Drawing.Size(536, 38);
+            this.pVariableN.Size = new System.Drawing.Size(386, 38);
             this.pVariableN.TabIndex = 10;
             // 
             // txtN
             // 
-            this.txtN.Location = new System.Drawing.Point(215, 5);
-            this.txtN.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtN.Location = new System.Drawing.Point(157, 5);
+            this.txtN.Margin = new System.Windows.Forms.Padding(5);
             this.txtN.Name = "txtN";
-            this.txtN.Size = new System.Drawing.Size(164, 28);
-            this.txtN.TabIndex = 2;
+            this.txtN.Size = new System.Drawing.Size(164, 23);
+            this.txtN.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.label7.Location = new System.Drawing.Point(181, 8);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label7.Location = new System.Drawing.Point(131, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 21);
+            this.label7.Size = new System.Drawing.Size(16, 17);
             this.label7.TabIndex = 3;
             this.label7.Text = "n";
             // 
@@ -254,29 +266,29 @@ namespace Simulacion_TP_3
             this.pVariableB.Controls.Add(this.txtB);
             this.pVariableB.Controls.Add(this.label6);
             this.pVariableB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pVariableB.Location = new System.Drawing.Point(5, 229);
-            this.pVariableB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pVariableB.Location = new System.Drawing.Point(5, 224);
+            this.pVariableB.Margin = new System.Windows.Forms.Padding(5);
             this.pVariableB.Name = "pVariableB";
-            this.pVariableB.Size = new System.Drawing.Size(536, 38);
+            this.pVariableB.Size = new System.Drawing.Size(386, 38);
             this.pVariableB.TabIndex = 9;
             this.pVariableB.Visible = false;
             // 
             // txtB
             // 
-            this.txtB.Location = new System.Drawing.Point(215, 5);
-            this.txtB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtB.Location = new System.Drawing.Point(157, 5);
+            this.txtB.Margin = new System.Windows.Forms.Padding(5);
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(164, 28);
-            this.txtB.TabIndex = 2;
+            this.txtB.Size = new System.Drawing.Size(164, 23);
+            this.txtB.TabIndex = 0;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.label6.Location = new System.Drawing.Point(181, 8);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label6.Location = new System.Drawing.Point(131, 8);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(22, 21);
+            this.label6.Size = new System.Drawing.Size(16, 17);
             this.label6.TabIndex = 3;
             this.label6.Text = "b";
             // 
@@ -286,29 +298,29 @@ namespace Simulacion_TP_3
             this.pVariableA.Controls.Add(this.txtA);
             this.pVariableA.Controls.Add(this.label5);
             this.pVariableA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pVariableA.Location = new System.Drawing.Point(5, 191);
-            this.pVariableA.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pVariableA.Location = new System.Drawing.Point(5, 186);
+            this.pVariableA.Margin = new System.Windows.Forms.Padding(5);
             this.pVariableA.Name = "pVariableA";
-            this.pVariableA.Size = new System.Drawing.Size(536, 38);
+            this.pVariableA.Size = new System.Drawing.Size(386, 38);
             this.pVariableA.TabIndex = 8;
             this.pVariableA.Visible = false;
             // 
             // txtA
             // 
-            this.txtA.Location = new System.Drawing.Point(215, 5);
-            this.txtA.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtA.Location = new System.Drawing.Point(157, 5);
+            this.txtA.Margin = new System.Windows.Forms.Padding(5);
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(164, 28);
-            this.txtA.TabIndex = 2;
+            this.txtA.Size = new System.Drawing.Size(164, 23);
+            this.txtA.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.label5.Location = new System.Drawing.Point(181, 8);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label5.Location = new System.Drawing.Point(131, 8);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 21);
+            this.label5.Size = new System.Drawing.Size(16, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "a";
             // 
@@ -318,29 +330,29 @@ namespace Simulacion_TP_3
             this.pLambda.Controls.Add(this.txtLambda);
             this.pLambda.Controls.Add(this.label4);
             this.pLambda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pLambda.Location = new System.Drawing.Point(5, 153);
-            this.pLambda.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pLambda.Location = new System.Drawing.Point(5, 148);
+            this.pLambda.Margin = new System.Windows.Forms.Padding(5);
             this.pLambda.Name = "pLambda";
-            this.pLambda.Size = new System.Drawing.Size(536, 38);
-            this.pLambda.TabIndex = 7;
+            this.pLambda.Size = new System.Drawing.Size(386, 38);
+            this.pLambda.TabIndex = 0;
             this.pLambda.Visible = false;
             // 
             // txtLambda
             // 
-            this.txtLambda.Location = new System.Drawing.Point(215, 5);
-            this.txtLambda.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtLambda.Location = new System.Drawing.Point(157, 5);
+            this.txtLambda.Margin = new System.Windows.Forms.Padding(5);
             this.txtLambda.Name = "txtLambda";
-            this.txtLambda.Size = new System.Drawing.Size(164, 28);
-            this.txtLambda.TabIndex = 2;
+            this.txtLambda.Size = new System.Drawing.Size(164, 23);
+            this.txtLambda.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.label4.Location = new System.Drawing.Point(127, 10);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label4.Location = new System.Drawing.Point(88, 10);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 21);
+            this.label4.Size = new System.Drawing.Size(59, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Lambda";
             // 
@@ -350,29 +362,29 @@ namespace Simulacion_TP_3
             this.pDesviacionEstandar.Controls.Add(this.txtDesviacionEstandar);
             this.pDesviacionEstandar.Controls.Add(this.label3);
             this.pDesviacionEstandar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pDesviacionEstandar.Location = new System.Drawing.Point(5, 115);
-            this.pDesviacionEstandar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pDesviacionEstandar.Location = new System.Drawing.Point(5, 110);
+            this.pDesviacionEstandar.Margin = new System.Windows.Forms.Padding(5);
             this.pDesviacionEstandar.Name = "pDesviacionEstandar";
-            this.pDesviacionEstandar.Size = new System.Drawing.Size(536, 38);
+            this.pDesviacionEstandar.Size = new System.Drawing.Size(386, 38);
             this.pDesviacionEstandar.TabIndex = 6;
             this.pDesviacionEstandar.Visible = false;
             // 
             // txtDesviacionEstandar
             // 
-            this.txtDesviacionEstandar.Location = new System.Drawing.Point(215, 5);
-            this.txtDesviacionEstandar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDesviacionEstandar.Location = new System.Drawing.Point(157, 5);
+            this.txtDesviacionEstandar.Margin = new System.Windows.Forms.Padding(5);
             this.txtDesviacionEstandar.Name = "txtDesviacionEstandar";
-            this.txtDesviacionEstandar.Size = new System.Drawing.Size(164, 28);
-            this.txtDesviacionEstandar.TabIndex = 2;
+            this.txtDesviacionEstandar.Size = new System.Drawing.Size(164, 23);
+            this.txtDesviacionEstandar.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.label3.Location = new System.Drawing.Point(35, 10);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label3.Location = new System.Drawing.Point(9, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 21);
+            this.label3.Size = new System.Drawing.Size(138, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Desviación Estandar";
             // 
@@ -382,29 +394,29 @@ namespace Simulacion_TP_3
             this.pMedia.Controls.Add(this.txtMedia);
             this.pMedia.Controls.Add(this.label2);
             this.pMedia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pMedia.Location = new System.Drawing.Point(5, 77);
-            this.pMedia.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pMedia.Location = new System.Drawing.Point(5, 72);
+            this.pMedia.Margin = new System.Windows.Forms.Padding(5);
             this.pMedia.Name = "pMedia";
-            this.pMedia.Size = new System.Drawing.Size(536, 38);
+            this.pMedia.Size = new System.Drawing.Size(386, 38);
             this.pMedia.TabIndex = 5;
             this.pMedia.Visible = false;
             // 
             // txtMedia
             // 
-            this.txtMedia.Location = new System.Drawing.Point(215, 5);
-            this.txtMedia.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMedia.Location = new System.Drawing.Point(157, 5);
+            this.txtMedia.Margin = new System.Windows.Forms.Padding(5);
             this.txtMedia.Name = "txtMedia";
-            this.txtMedia.Size = new System.Drawing.Size(164, 28);
-            this.txtMedia.TabIndex = 2;
+            this.txtMedia.Size = new System.Drawing.Size(164, 23);
+            this.txtMedia.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.label2.Location = new System.Drawing.Point(141, 8);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label2.Location = new System.Drawing.Point(101, 8);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 21);
+            this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Media";
             // 
@@ -414,10 +426,10 @@ namespace Simulacion_TP_3
             this.pDistribuciones.Controls.Add(this.cboDistribuciones);
             this.pDistribuciones.Controls.Add(this.label1);
             this.pDistribuciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pDistribuciones.Location = new System.Drawing.Point(5, 26);
-            this.pDistribuciones.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pDistribuciones.Location = new System.Drawing.Point(5, 21);
+            this.pDistribuciones.Margin = new System.Windows.Forms.Padding(5);
             this.pDistribuciones.Name = "pDistribuciones";
-            this.pDistribuciones.Size = new System.Drawing.Size(536, 51);
+            this.pDistribuciones.Size = new System.Drawing.Size(386, 51);
             this.pDistribuciones.TabIndex = 4;
             // 
             // cboDistribuciones
@@ -426,21 +438,21 @@ namespace Simulacion_TP_3
             this.cboDistribuciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDistribuciones.ForeColor = System.Drawing.SystemColors.Desktop;
             this.cboDistribuciones.FormattingEnabled = true;
-            this.cboDistribuciones.Location = new System.Drawing.Point(215, 14);
-            this.cboDistribuciones.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboDistribuciones.Location = new System.Drawing.Point(157, 14);
+            this.cboDistribuciones.Margin = new System.Windows.Forms.Padding(5);
             this.cboDistribuciones.Name = "cboDistribuciones";
-            this.cboDistribuciones.Size = new System.Drawing.Size(284, 27);
+            this.cboDistribuciones.Size = new System.Drawing.Size(224, 25);
             this.cboDistribuciones.TabIndex = 0;
             this.cboDistribuciones.SelectedIndexChanged += new System.EventHandler(this.CboDistribuciones_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.label1.Location = new System.Drawing.Point(81, 19);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label1.Location = new System.Drawing.Point(50, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 21);
+            this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Distribuciones";
             // 
@@ -456,26 +468,14 @@ namespace Simulacion_TP_3
             this.indiceDataGridViewTextBoxColumn,
             this.valorDataGridViewTextBoxColumn});
             this.dgv.DataSource = this.iteracionBindingSource;
-            this.dgv.Location = new System.Drawing.Point(-1, 0);
-            this.dgv.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Margin = new System.Windows.Forms.Padding(5);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
-            this.dgv.RowHeadersWidth = 51;
-            this.dgv.Size = new System.Drawing.Size(598, 347);
+            this.dgv.RowHeadersWidth = 10;
+            this.dgv.Size = new System.Drawing.Size(442, 305);
             this.dgv.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(40, 20);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(688, 21);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Medina Juan - Donalisio Juan Pablo - Dagotto Florencia - Spini Leila -Parrucci La" +
-    "ra";
             // 
             // indiceDataGridViewTextBoxColumn
             // 
@@ -499,23 +499,22 @@ namespace Simulacion_TP_3
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1160, 498);
+            this.ClientSize = new System.Drawing.Size(839, 451);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pInferior);
             this.Controls.Add(this.pSuperior);
-            this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPrincipal";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Variables Aleatorias";
             this.pSuperior.ResumeLayout(false);
             this.pInferior.ResumeLayout(false);
-            this.pInferior.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
