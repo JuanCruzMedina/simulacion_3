@@ -29,7 +29,10 @@ namespace TP3.Clases
             vector[0] = x;
             return vector;
         }
-        public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior) => (float)((_Lambda * Math.Exp(-_Lambda * mc)) * (limiteSuperior - limiteInferior));
+
+        public override float CalcularProbabilidad(double mc, double limiteInferior, double limiteSuperior) => 
+            (float)((_Lambda * Math.Exp(-_Lambda * mc)) * (limiteSuperior - limiteInferior));
+
         public override int ObtenerDatosEmpiricos() => default;
         public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.Lambda };
         public override bool CalcularChi(List<Iteracion> variables, int cantIntervalos)

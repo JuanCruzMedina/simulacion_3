@@ -1,5 +1,6 @@
 ﻿using Simulacion_TP_3.Clases;
 using Simulacion_TP_3.Interfaces;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +14,14 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Simulacion_TP_3
 {
-    public partial class frmGrafico : Form
+    public partial class FrmGrafico : Form
     {
         private double[] valuesFE, valuesFO;
         private double[,] intv;
-        private List<Iteracion> _dataSource;
-        private IDistribucion _distribucion;
+        private readonly List<Iteracion> _dataSource;
+        private readonly IDistribucion _distribucion;
 
-        public frmGrafico(List<Iteracion> dataSource, IDistribucion dist)
+        public FrmGrafico(List<Iteracion> dataSource, IDistribucion dist)
         {
             InitializeComponent();
             this._dataSource = dataSource;
@@ -32,10 +33,10 @@ namespace Simulacion_TP_3
             chFE.Palette = ChartColorPalette.Berry;
             chFE.Series["Serie1"].LegendText = "Frecuencia esperada";
             chFO.Series["Serie2"].LegendText = "Frecuencia observada";
-            lblDist.Text += dist.ObtenerNombre();
+            lblDist.Text += Environment.NewLine + dist.ObtenerNombre();
         }
 
-        private void btnProbar_Click(object sender, EventArgs e)
+        private void BtnProbar_Click(object sender, EventArgs e)
         {
             TestChi();
         }
@@ -56,7 +57,6 @@ namespace Simulacion_TP_3
                 var _medio = Convert.ToDouble(((distribucion.intervalos[i, 0] + distribucion.intervalos[i, 1]) / 2).ToString("#.00"));
                 var _fe = Convert.ToDouble(distribucion.fe[i].ToString("#.00"));
                 var _cac = Convert.ToDouble(distribucion.cac[i].ToString("#.00"));
-                //var _cac = Convert.ToDouble(distribucion.cac[i].ToString("#.00"));
                 grilla.Rows.Add(_inf, _sup, _medio, _fo, _p, _fe, _cac);
             }
             dgvChi.Refresh();
@@ -66,20 +66,21 @@ namespace Simulacion_TP_3
         {
             try
             {
-                lblResultado.Visible = false;
                 int k = Convert.ToInt32(txt_intervalos.Text);
                 dgvChi.DataSource = null;
                 bool rechazada = _distribucion.CalcularChi(_dataSource, k);
                 CargarGrillaChi(dgvChi);
                 Clases.Distribucion distribucion = _distribucion as Clases.Distribucion;
-                string msg = "Resultado: Con los grados de libertad " + (k - 1) + " se obtuvo un valor calculado de " + (distribucion.cac[k - 1]) + ".\nSe obtuvo un valor crítico de " + distribucion.valorCritico + ", por lo tanto, la hipótesis ";
-                if (rechazada) msg += "fue rechazada";
-                else msg += "no puede ser rechazada";
+                string msg = "Resultado: Con los grados de libertad " +
+                              (k - 1) +
+                              " se obtuvo un valor calculado de " +
+                              (distribucion.cac[k - 1]) +
+                              ". Se obtuvo un valor crítico de " +
+                              distribucion.valorCritico +
+                              ", por lo tanto, la hipótesis " +
+                              (rechazada ? "fue rechazada." : "no puede ser rechazada.");
+                MessageBox.Show(msg);
                 lblResultado.Text = msg;
-                lblResultado.Font = new Font("gothic century", lblResultado.Font.Size);
-                lblResultado.ForeColor = Color.FromArgb(0, 0, 0);
-                lblResultado.Visible = true;
-
                 this.CargarGrafico();
                 return rechazada;
             }
@@ -110,7 +111,8 @@ namespace Simulacion_TP_3
             {
                 var inter = Convert.ToDouble(intv[i, 0].ToString("#.00")) + " - " + Convert.ToDouble(intv[i, 1].ToString("#.00"));
                 chFO.Series["Serie2"].Points.AddXY(inter, valuesFO[i]);
-                if (!infinito) chFE.Series["Serie1"].Points.AddXY(inter, valuesFE[i]);
+                if (!infinito)
+                    chFE.Series["Serie1"].Points.AddXY(inter, valuesFE[i]);
             }
         }
     }

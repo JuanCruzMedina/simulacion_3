@@ -3,8 +3,7 @@ C:\Users\juan_\source\repos\sim\simulacion_3\bin\Release\Simulacion_TP_3.exe
 C:\Users\juan_\source\repos\sim\simulacion_3\bin\Release\Simulacion_TP_3.pdb
 C:\Users\juan_\source\repos\sim\simulacion_3\bin\Release\MathNet.Numerics.dll
 C:\Users\juan_\source\repos\sim\simulacion_3\bin\Release\MathNet.Numerics.xml
-C:\Users\juan_\source\repos\sim\simulacion_3\obj\Release\Simulacion_TP_3.csproj.AssemblyReference.cache
-C:\Users\juan_\source\repos\sim\simulacion_3\obj\Release\Simulacion_TP_3.frmGrafico.resources
+C:\Users\juan_\source\repos\sim\simulacion_3\obj\Release\Simulacion_TP_3.FrmGrafico.resources
 C:\Users\juan_\source\repos\sim\simulacion_3\obj\Release\Simulacion_TP_3.FrmPrincipal.resources
 C:\Users\juan_\source\repos\sim\simulacion_3\obj\Release\Simulacion_TP_3.Properties.Resources.resources
 C:\Users\juan_\source\repos\sim\simulacion_3\obj\Release\Simulacion_TP_3.csproj.GenerateResource.cache

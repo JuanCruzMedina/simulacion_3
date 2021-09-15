@@ -108,7 +108,6 @@ namespace Simulacion_TP_3
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Generador de Variables Aleatorias";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // pInferior
             // 
@@ -159,7 +158,7 @@ namespace Simulacion_TP_3
             this.btnGenerarGraficos.TabIndex = 0;
             this.btnGenerarGraficos.Text = "Generar Gráficos";
             this.btnGenerarGraficos.UseVisualStyleBackColor = true;
-            this.btnGenerarGraficos.Click += new System.EventHandler(this.btnGenerarGraficos_Click);
+            this.btnGenerarGraficos.Click += new System.EventHandler(this.BtnGenerarGraficos_Click);
             // 
             // panel3
             // 
@@ -462,7 +461,7 @@ namespace Simulacion_TP_3
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AutoGenerateColumns = false;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dgv.BackgroundColor = System.Drawing.Color.White;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.indiceDataGridViewTextBoxColumn,

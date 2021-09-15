@@ -10,9 +10,9 @@ namespace TP3.Clases
     {
         private readonly double _media;
         private readonly double _desviacionEstandar;
-        private readonly Dictionary<int, double> _valoresCriticos;
-        public double salto;
-        public bool rechazada;
+        private Dictionary<int, double> _valoresCriticos;
+        private double _salto;
+        private bool _rechazada;
         public NormalConvolucion(double media, double desviacionEstandar)
         {
             this._media = media;
@@ -27,7 +27,8 @@ namespace TP3.Clases
         public override double?[] ObtenerVariableAleatoria()
         {
             double ac = 0.0;
-            for (int i = 0; i < 12; i++) ac += _Random.NextDouble();
+            for (int i = 0; i < 12; i++)
+                ac += _Random.NextDouble();
             ac -= 6.0;
             double x = ac * _desviacionEstandar + _media;
             double?[] vector = new double?[1];
@@ -41,8 +42,8 @@ namespace TP3.Clases
 
         public override bool CalcularChi(List<Iteracion> variables, int cantIntervalos)
         {
-            if (_valoresCriticos.Count == 0)
-                CargarDiccionario();
+            if (_valoresCriticos.Count == 0) CargarDiccionario();
+
             fo = new double[cantIntervalos];
             fe = new double[cantIntervalos];
             c = new double[cantIntervalos];
@@ -56,13 +57,12 @@ namespace TP3.Clases
             }
             intervalos = CalcularIntervalos(nums, cantIntervalos);
 
-            salto = nums.Max() / cantIntervalos;
+            _salto = nums.Max() / cantIntervalos;
             for (int i = 0; i < intervalos.GetLength(0); i++)
             {
                 var valorMedio = (intervalos[i, 0] + intervalos[i, 1]) / 2;
                 prob[i] = this.CalcularProbabilidad(valorMedio, intervalos[i, 0], intervalos[i, 1]);
             }
-
             // Primero calculamos las frecuencias observadas
             CalcularFO(variables);
             // Calculamos las frecuencias esperadas
@@ -70,9 +70,8 @@ namespace TP3.Clases
             // Obtenemos el estadistico acumulado
             CalcularEstadisticoPrueba();
             // Verificamos si se rechaza la hipotesis nula
-            TestHipotesis(variables);
-
-            return rechazada;
+            TestHipotesis();
+            return _rechazada;
         }
         private double[,] CalcularIntervalos(List<double> numeros, int cantIntervalos)
         {
@@ -82,8 +81,10 @@ namespace TP3.Clases
 
             for (int i = 1; i < n; i++)
             {
-                if (numeros[i] > max) max = numeros[i];
-                if (numeros[i] < min) min = numeros[i];
+                if (numeros[i] > max)
+                    max = numeros[i];
+                if (numeros[i] < min)
+                    min = numeros[i];
             }
 
             double diferencia = max - min;
@@ -140,14 +141,16 @@ namespace TP3.Clases
 
         // Este metodo verifica si se puede rechazar o no la hipotesis nula
 
-        public void TestHipotesis(List<Iteracion> variables)
+        public void TestHipotesis()
         {
             int gradosLibertad;
-            if (intervalos.GetLength(0) == 1) gradosLibertad = 1;
-            else gradosLibertad = intervalos.GetLength(0) - 1;
+            if (intervalos.GetLength(0) == 1)
+                gradosLibertad = 1;
+            else
+                gradosLibertad = intervalos.GetLength(0) - 1;
 
             this.valorCritico = _valoresCriticos[gradosLibertad];
-            this.rechazada = !(_valoresCriticos[gradosLibertad] > cac[cac.Length - 1]);
+            this._rechazada = !(_valoresCriticos[gradosLibertad] > cac[cac.Length - 1]);
         }
 
         private void CargarDiccionario()

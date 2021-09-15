@@ -1,11 +1,11 @@
 ﻿using Simulacion_TP_3.Clases;
 using Simulacion_TP_3.Interfaces;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Reflection;
 using System.Windows.Forms;
+
 using TP3.Clases;
 
 namespace Simulacion_TP_3
@@ -132,7 +132,7 @@ namespace Simulacion_TP_3
             for (int i = 1; i <= _cantidadNumeros; i++)
             {
                 var vector = _distribucion.ObtenerVariableAleatoria();
-                var valor1 = Math.Round((double)vector[0], _cantidadDecimales);
+                //_dataSource.Add(new Iteracion(i, (double)vector[0]));
                 _dataSource.Add(new Iteracion(i, Math.Round((double)vector[0], _cantidadDecimales)));
                 if (vector.Length == 2) _dataSource.Add(new Iteracion(i, Math.Round((double)vector[1], _cantidadDecimales)));
             }
@@ -147,17 +147,13 @@ namespace Simulacion_TP_3
             HabilitarParametros();
         }
 
-        private void btnGenerarGraficos_Click(object sender, EventArgs e)
+        private void BtnGenerarGraficos_Click(object sender, EventArgs e)
         {
-            frmGrafico graf = new frmGrafico(_dataSource, _distribucion);
+            FrmGrafico graf = new FrmGrafico(_dataSource, _distribucion);
             graf.ShowDialog();
         }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
+
     enum Distribucion
     {
         [Description("Exponencial Negativa"),]
@@ -170,90 +166,5 @@ namespace Simulacion_TP_3
         PoissonDis,
         [Description("Uniforme")]
         Uniforme
-    }
-    public static class EnumExtension
-    {
-        /// <summary>
-        /// Gets the string of an DescriptionAttribute of an Enum.
-        /// </summary>
-        /// <param name="value">The Enum value for which the description is needed.</param>
-        /// <returns>If a DescriptionAttribute is set it return the content of it.
-        /// Otherwise just the raw name as string.</returns>
-        public static string Description(this Enum value)
-        {
-            if (value == null)
-            {
-                throw new ArgumentNullException("value");
-            }
-
-            string description = value.ToString();
-            FieldInfo fieldInfo = value.GetType().GetField(description);
-            DescriptionAttribute[] attributes =
-               (DescriptionAttribute[])
-             fieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), false);
-
-            if (attributes != null && attributes.Length > 0)
-            {
-                description = attributes[0].Description;
-            }
-
-            return description;
-        }
-
-        /// <summary>
-        /// Creates an List with all keys and values of a given Enum class
-        /// </summary>
-        /// <typeparam name="T">Must be derived from class Enum!</typeparam>
-        /// <returns>A list of KeyValuePair&lt;Enum, string&gt; with all available
-        /// names and values of the given Enum.</returns>
-        public static IList<KeyValuePair<Enum, string>> ToList<T>() where T : struct
-        {
-            var type = typeof(T);
-
-            if (!type.IsEnum)
-            {
-                throw new ArgumentException("T must be an enum");
-            }
-
-            return (IList<KeyValuePair<Enum, string>>)
-                    Enum.GetValues(type)
-                        .OfType<Enum>()
-                        .Select(e => new KeyValuePair<Enum, string>(e, e.Description()))
-                        .ToArray();
-        }
-
-        public static T GetValueFromDescription<T>(string description) where T : struct
-        {
-            var type = typeof(T);
-
-            if (!type.IsEnum)
-            {
-                throw new ArgumentException("T must be an enum");
-            }
-
-            foreach (var field in type.GetFields())
-            {
-                var attribute = Attribute.GetCustomAttribute(field,
-                    typeof(DescriptionAttribute)) as DescriptionAttribute;
-
-                if (attribute != null)
-                {
-                    if (attribute.Description == description)
-                    {
-                        return (T)field.GetValue(null);
-                    }
-                }
-                else
-                {
-                    if (field.Name == description)
-                    {
-                        return (T)field.GetValue(null);
-                    }
-                }
-            }
-
-            throw new ArgumentOutOfRangeException("description");
-            // or return default(T);
-        }
     }
 }

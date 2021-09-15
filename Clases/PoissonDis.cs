@@ -76,7 +76,7 @@ namespace TP3.Clases
             // Obtenemos el estadistico acumulado
             CalcularEstadisticoPrueba();
             // Verificamos si se rechaza la hipotesis nula
-            TestHipotesis(variables);
+            TestHipotesis();
 
             return rechazada;
         }
@@ -146,7 +146,7 @@ namespace TP3.Clases
 
         // Este metodo verifica si se puede rechazar o no la hipotesis nula
 
-        public void TestHipotesis(List<Iteracion> variables)
+        public void TestHipotesis()
         {
             int gradosLibertad;
             if (intervalos.GetLength(0) == 1) gradosLibertad = 1;
