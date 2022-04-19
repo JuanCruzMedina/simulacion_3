@@ -59,6 +59,7 @@
     <Compile Include="Clases\NormalMuller.cs" />
     <Compile Include="Clases\PoissonDis.cs" />
     <Compile Include="Clases\Uniforme.cs" />
+    <Compile Include="Common.cs" />
     <Compile Include="EnumExtension.cs" />
     <Compile Include="frmGrafico.cs">
       <SubType>Form</SubType>

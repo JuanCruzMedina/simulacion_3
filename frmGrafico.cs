@@ -26,12 +26,8 @@ namespace Simulacion_TP_3
             InitializeComponent();
             this._dataSource = dataSource;
             this._distribucion = dist;
-            chFE.Titles.Add("Histograma de frecuencias esperadas");
             chFO.Titles.Add("Histograma de frecuencias observadas");
-            chFE.Series.Add("Serie1");
             chFO.Series.Add("Serie2");
-            chFE.Palette = ChartColorPalette.Berry;
-            chFE.Series["Serie1"].LegendText = "Frecuencia esperada";
             chFO.Series["Serie2"].LegendText = "Frecuencia observada";
             lblDist.Text += Environment.NewLine + dist.ObtenerNombre();
         }
@@ -66,7 +62,7 @@ namespace Simulacion_TP_3
         {
             try
             {
-                int k = Convert.ToInt32(txt_intervalos.Text);
+                int k = Convert.ToInt32(txt_intervalos.SelectedItem.ToString());
                 dgvChi.DataSource = null;
                 bool rechazada = _distribucion.CalcularChi(_dataSource, k);
                 CargarGrillaChi(dgvChi);
@@ -74,7 +70,7 @@ namespace Simulacion_TP_3
                 string msg = "Resultado: Con los grados de libertad " +
                               (k - 1) +
                               " se obtuvo un valor calculado de " +
-                              (distribucion.cac[k - 1]) +
+                              Common.TruncateDouble(distribucion.cac[k - 1],4) +
                               ". Se obtuvo un valor crítico de " +
                               distribucion.valorCritico +
                               ", por lo tanto, la hipótesis " +
@@ -94,7 +90,6 @@ namespace Simulacion_TP_3
         private void CargarGrafico()
         {
             bool infinito = false;
-            chFE.Series["Serie1"].Points.Clear();
             chFO.Series["Serie2"].Points.Clear();
             foreach (var item in valuesFE)
             {
@@ -111,8 +106,6 @@ namespace Simulacion_TP_3
             {
                 var inter = Convert.ToDouble(intv[i, 0].ToString("#.00")) + " - " + Convert.ToDouble(intv[i, 1].ToString("#.00"));
                 chFO.Series["Serie2"].Points.AddXY(inter, valuesFO[i]);
-                if (!infinito)
-                    chFE.Series["Serie1"].Points.AddXY(inter, valuesFE[i]);
             }
         }
     }

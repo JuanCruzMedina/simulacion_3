@@ -98,20 +98,21 @@ namespace Simulacion_TP_3
             // 
             // lblTitulo
             // 
+            this.lblTitulo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(839, 82);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Generador de Variables Aleatorias";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pInferior
             // 
-            this.pInferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pInferior.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pInferior.Controls.Add(this.label8);
             this.pInferior.Controls.Add(this.panel4);
             this.pInferior.Controls.Add(this.panel3);
@@ -124,15 +125,18 @@ namespace Simulacion_TP_3
             // 
             // label8
             // 
+            this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(2, 5);
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(421, 59);
+            this.label8.Size = new System.Drawing.Size(464, 64);
             this.label8.TabIndex = 4;
-            this.label8.Text = "- Medina, Juan Cruz                 - Donalisio,Juan Pablo \r\n- Dagotto, Florencia" +
-    " Agustina   - Spini, Leila \r\n- Parrucci, Lara";
+            this.label8.Text = "- Juan Cruz Medina             - Lautaro Goyeneceha\r\n- Gabriel Bracamonte        " +
+    "  - Alejandro Guanuco\r\n\r\n";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -146,18 +150,19 @@ namespace Simulacion_TP_3
             // 
             // btnGenerarGraficos
             // 
+            this.btnGenerarGraficos.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGenerarGraficos.Enabled = false;
             this.btnGenerarGraficos.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnGenerarGraficos.FlatAppearance.BorderSize = 2;
             this.btnGenerarGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarGraficos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGenerarGraficos.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnGenerarGraficos.Location = new System.Drawing.Point(5, 14);
             this.btnGenerarGraficos.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnGenerarGraficos.Name = "btnGenerarGraficos";
             this.btnGenerarGraficos.Size = new System.Drawing.Size(179, 33);
             this.btnGenerarGraficos.TabIndex = 0;
             this.btnGenerarGraficos.Text = "Generar Gráficos";
-            this.btnGenerarGraficos.UseVisualStyleBackColor = true;
+            this.btnGenerarGraficos.UseVisualStyleBackColor = false;
             this.btnGenerarGraficos.Click += new System.EventHandler(this.BtnGenerarGraficos_Click);
             // 
             // panel3
@@ -172,17 +177,18 @@ namespace Simulacion_TP_3
             // 
             // btnGenerar
             // 
+            this.btnGenerar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGenerar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnGenerar.FlatAppearance.BorderSize = 2;
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGenerar.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnGenerar.Location = new System.Drawing.Point(5, 14);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(5);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(164, 33);
             this.btnGenerar.TabIndex = 0;
             this.btnGenerar.Text = "Generar";
-            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.BtnGenerar_Click);
             // 
             // splitContainer1
@@ -209,7 +215,7 @@ namespace Simulacion_TP_3
             // 
             // gbParametros
             // 
-            this.gbParametros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.gbParametros.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gbParametros.Controls.Add(this.pVariableN);
             this.gbParametros.Controls.Add(this.pVariableB);
             this.gbParametros.Controls.Add(this.pVariableA);
@@ -218,7 +224,7 @@ namespace Simulacion_TP_3
             this.gbParametros.Controls.Add(this.pMedia);
             this.gbParametros.Controls.Add(this.pDistribuciones);
             this.gbParametros.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbParametros.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gbParametros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gbParametros.Location = new System.Drawing.Point(0, 0);
             this.gbParametros.Margin = new System.Windows.Forms.Padding(5);
             this.gbParametros.Name = "gbParametros";
@@ -230,7 +236,7 @@ namespace Simulacion_TP_3
             // 
             // pVariableN
             // 
-            this.pVariableN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pVariableN.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pVariableN.Controls.Add(this.txtN);
             this.pVariableN.Controls.Add(this.label7);
             this.pVariableN.Dock = System.Windows.Forms.DockStyle.Top;
@@ -245,13 +251,15 @@ namespace Simulacion_TP_3
             this.txtN.Location = new System.Drawing.Point(157, 5);
             this.txtN.Margin = new System.Windows.Forms.Padding(5);
             this.txtN.Name = "txtN";
-            this.txtN.Size = new System.Drawing.Size(164, 23);
+            this.txtN.Size = new System.Drawing.Size(210, 23);
             this.txtN.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(131, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
@@ -261,7 +269,7 @@ namespace Simulacion_TP_3
             // 
             // pVariableB
             // 
-            this.pVariableB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pVariableB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pVariableB.Controls.Add(this.txtB);
             this.pVariableB.Controls.Add(this.label6);
             this.pVariableB.Dock = System.Windows.Forms.DockStyle.Top;
@@ -277,13 +285,15 @@ namespace Simulacion_TP_3
             this.txtB.Location = new System.Drawing.Point(157, 5);
             this.txtB.Margin = new System.Windows.Forms.Padding(5);
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(164, 23);
+            this.txtB.Size = new System.Drawing.Size(210, 23);
             this.txtB.TabIndex = 0;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(131, 8);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
@@ -293,7 +303,7 @@ namespace Simulacion_TP_3
             // 
             // pVariableA
             // 
-            this.pVariableA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pVariableA.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pVariableA.Controls.Add(this.txtA);
             this.pVariableA.Controls.Add(this.label5);
             this.pVariableA.Dock = System.Windows.Forms.DockStyle.Top;
@@ -309,13 +319,15 @@ namespace Simulacion_TP_3
             this.txtA.Location = new System.Drawing.Point(157, 5);
             this.txtA.Margin = new System.Windows.Forms.Padding(5);
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(164, 23);
+            this.txtA.Size = new System.Drawing.Size(210, 23);
             this.txtA.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(131, 8);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
@@ -325,7 +337,7 @@ namespace Simulacion_TP_3
             // 
             // pLambda
             // 
-            this.pLambda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pLambda.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pLambda.Controls.Add(this.txtLambda);
             this.pLambda.Controls.Add(this.label4);
             this.pLambda.Dock = System.Windows.Forms.DockStyle.Top;
@@ -341,13 +353,15 @@ namespace Simulacion_TP_3
             this.txtLambda.Location = new System.Drawing.Point(157, 5);
             this.txtLambda.Margin = new System.Windows.Forms.Padding(5);
             this.txtLambda.Name = "txtLambda";
-            this.txtLambda.Size = new System.Drawing.Size(164, 23);
+            this.txtLambda.Size = new System.Drawing.Size(210, 23);
             this.txtLambda.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(88, 10);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
@@ -357,7 +371,7 @@ namespace Simulacion_TP_3
             // 
             // pDesviacionEstandar
             // 
-            this.pDesviacionEstandar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pDesviacionEstandar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pDesviacionEstandar.Controls.Add(this.txtDesviacionEstandar);
             this.pDesviacionEstandar.Controls.Add(this.label3);
             this.pDesviacionEstandar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -373,13 +387,15 @@ namespace Simulacion_TP_3
             this.txtDesviacionEstandar.Location = new System.Drawing.Point(157, 5);
             this.txtDesviacionEstandar.Margin = new System.Windows.Forms.Padding(5);
             this.txtDesviacionEstandar.Name = "txtDesviacionEstandar";
-            this.txtDesviacionEstandar.Size = new System.Drawing.Size(164, 23);
+            this.txtDesviacionEstandar.Size = new System.Drawing.Size(210, 23);
             this.txtDesviacionEstandar.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(9, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
@@ -389,7 +405,7 @@ namespace Simulacion_TP_3
             // 
             // pMedia
             // 
-            this.pMedia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pMedia.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pMedia.Controls.Add(this.txtMedia);
             this.pMedia.Controls.Add(this.label2);
             this.pMedia.Dock = System.Windows.Forms.DockStyle.Top;
@@ -405,13 +421,15 @@ namespace Simulacion_TP_3
             this.txtMedia.Location = new System.Drawing.Point(157, 5);
             this.txtMedia.Margin = new System.Windows.Forms.Padding(5);
             this.txtMedia.Name = "txtMedia";
-            this.txtMedia.Size = new System.Drawing.Size(164, 23);
+            this.txtMedia.Size = new System.Drawing.Size(210, 23);
             this.txtMedia.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(101, 8);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
@@ -421,7 +439,7 @@ namespace Simulacion_TP_3
             // 
             // pDistribuciones
             // 
-            this.pDistribuciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pDistribuciones.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pDistribuciones.Controls.Add(this.cboDistribuciones);
             this.pDistribuciones.Controls.Add(this.label1);
             this.pDistribuciones.Dock = System.Windows.Forms.DockStyle.Top;
@@ -440,14 +458,16 @@ namespace Simulacion_TP_3
             this.cboDistribuciones.Location = new System.Drawing.Point(157, 14);
             this.cboDistribuciones.Margin = new System.Windows.Forms.Padding(5);
             this.cboDistribuciones.Name = "cboDistribuciones";
-            this.cboDistribuciones.Size = new System.Drawing.Size(224, 25);
+            this.cboDistribuciones.Size = new System.Drawing.Size(210, 25);
             this.cboDistribuciones.TabIndex = 0;
             this.cboDistribuciones.SelectedIndexChanged += new System.EventHandler(this.CboDistribuciones_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(50, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";

@@ -53,3 +53,18 @@ C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.c
 C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.csproj.CopyComplete
 C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.exe
 C:\Users\Lali Parrucci\Documents\GitHub\simulacion_3\obj\Debug\Simulacion_TP_3.pdb
+C:\Users\juan_\Desktop\Repos\simulation-test-3\bin\Debug\Simulacion_TP_3.exe.config
+C:\Users\juan_\Desktop\Repos\simulation-test-3\bin\Debug\Simulacion_TP_3.exe
+C:\Users\juan_\Desktop\Repos\simulation-test-3\bin\Debug\Simulacion_TP_3.pdb
+C:\Users\juan_\Desktop\Repos\simulation-test-3\bin\Debug\MathNet.Numerics.dll
+C:\Users\juan_\Desktop\Repos\simulation-test-3\bin\Debug\MathNet.Numerics.xml
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.csproj.AssemblyReference.cache
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.csproj.SuggestedBindingRedirects.cache
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.FrmGrafico.resources
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.FrmPrincipal.resources
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.Properties.Resources.resources
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.csproj.GenerateResource.cache
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.csproj.CoreCompileInputs.cache
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.csproj.CopyComplete
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.exe
+C:\Users\juan_\Desktop\Repos\simulation-test-3\obj\Debug\Simulacion_TP_3.pdb
