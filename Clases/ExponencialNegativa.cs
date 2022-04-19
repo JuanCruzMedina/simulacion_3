@@ -35,7 +35,7 @@ namespace TP3.Clases
 
         public override int ObtenerDatosEmpiricos() => default;
         public override List<Parametros> ObtenerParametros() => new List<Parametros>() { Parametros.Lambda };
-        public override bool CalcularChi(List<Iteracion> variables, int cantIntervalos)
+        public override bool Calcular(List<Iteracion> variables, int cantIntervalos)
         {
             if (_valoresCriticos.Count == 0)
                 CargarDiccionario();
@@ -61,14 +61,7 @@ namespace TP3.Clases
 
             // Primero calculamos las frecuencias observadas
             CalcularFO(variables);
-            // Calculamos las frecuencias esperadas
-            CalcularFE(variables);
-            // Obtenemos el estadistico acumulado
-            CalcularEstadisticoPrueba();
-            // Verificamos si se rechaza la hipotesis nula
-            TestHipotesis(variables);
-
-            return rechazada;
+            return false;
         }
         private double[,] CalcularIntervalos(List<double> numeros, int cantIntervalos)
         {
@@ -100,6 +93,7 @@ namespace TP3.Clases
         private void CalcularFO(List<Iteracion> variables)
         {
             // Vamos metiendo cada numero en el intervalo que corresponde
+            fo[0]++;
             foreach (Iteracion numero in variables)
             //double numero :variables
             {

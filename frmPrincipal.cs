@@ -98,14 +98,6 @@ namespace Simulacion_TP_3
                     else resultado.exito = false;
                     break;
 
-                case Distribucion.PoissonDis:
-                    if (usarDefault)
-                        _distribucion = new PoissonDis(default);
-                    else if (double.TryParse(txtLambda.Text, out double lambda))
-                        _distribucion = new PoissonDis(lambda);
-                    else resultado.exito = false;
-                    break;
-
                 case Distribucion.Uniforme:
                     if (usarDefault)
                         _distribucion = new Uniforme(default, default);
@@ -132,9 +124,9 @@ namespace Simulacion_TP_3
             for (int i = 1; i <= _cantidadNumeros; i++)
             {
                 var vector = _distribucion.ObtenerVariableAleatoria();
-                //_dataSource.Add(new Iteracion(i, (double)vector[0]));
                 _dataSource.Add(new Iteracion(i, Math.Round((double)vector[0], _cantidadDecimales)));
-                if (vector.Length == 2) _dataSource.Add(new Iteracion(i, Math.Round((double)vector[1], _cantidadDecimales)));
+                if (vector.Length == 2) 
+                    _dataSource.Add(new Iteracion(i, Math.Round((double)vector[1], _cantidadDecimales)));
             }
             dgv.DataSource = _dataSource;
             btnGenerarGraficos.Enabled = true;
@@ -162,8 +154,6 @@ namespace Simulacion_TP_3
         NormalConvolucion,
         [Description("Normal Muller")]
         NormalMuller,
-        [Description("Poisson")]
-        PoissonDis,
         [Description("Uniforme")]
         Uniforme
     }

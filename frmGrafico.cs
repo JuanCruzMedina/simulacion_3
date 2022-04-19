@@ -34,10 +34,10 @@ namespace Simulacion_TP_3
 
         private void BtnProbar_Click(object sender, EventArgs e)
         {
-            TestChi();
+            Calcular();
         }
 
-        private void CargarGrillaChi(DataGridView grilla)
+        private void CargarGrilla(DataGridView grilla)
         {
             grilla.Rows.Clear();
             Clases.Distribucion distribucion = _distribucion as Clases.Distribucion;
@@ -55,35 +55,23 @@ namespace Simulacion_TP_3
                 var _cac = Convert.ToDouble(distribucion.cac[i].ToString("#.00"));
                 grilla.Rows.Add(_inf, _sup, _medio, _fo, _p, _fe, _cac);
             }
-            dgvChi.Refresh();
+            dgv_valores.Refresh();
         }
 
-        private bool TestChi()
+        private void Calcular()
         {
             try
             {
                 int k = Convert.ToInt32(txt_intervalos.SelectedItem.ToString());
-                dgvChi.DataSource = null;
-                bool rechazada = _distribucion.CalcularChi(_dataSource, k);
-                CargarGrillaChi(dgvChi);
+                dgv_valores.DataSource = null;
+                _ = _distribucion.Calcular(_dataSource, k);
+                CargarGrilla(dgv_valores);
                 Clases.Distribucion distribucion = _distribucion as Clases.Distribucion;
-                string msg = "Resultado: Con los grados de libertad " +
-                              (k - 1) +
-                              " se obtuvo un valor calculado de " +
-                              Common.TruncateDouble(distribucion.cac[k - 1],4) +
-                              ". Se obtuvo un valor crítico de " +
-                              distribucion.valorCritico +
-                              ", por lo tanto, la hipótesis " +
-                              (rechazada ? "fue rechazada." : "no puede ser rechazada.");
-                MessageBox.Show(msg);
-                lblResultado.Text = msg;
                 this.CargarGrafico();
-                return rechazada;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
             }
         }
 

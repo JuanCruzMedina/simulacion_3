@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            this.dgvChi = new System.Windows.Forms.DataGridView();
+            this.dgv_valores = new System.Windows.Forms.DataGridView();
             this.inf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,18 +50,18 @@
             this.lblResultado = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txt_intervalos = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_valores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFO)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvChi
             // 
-            this.dgvChi.AllowUserToAddRows = false;
-            this.dgvChi.AllowUserToDeleteRows = false;
-            this.dgvChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvChi.BackgroundColor = System.Drawing.Color.White;
-            this.dgvChi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_valores.AllowUserToAddRows = false;
+            this.dgv_valores.AllowUserToDeleteRows = false;
+            this.dgv_valores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_valores.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_valores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -69,9 +69,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvChi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_valores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_valores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_valores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.inf,
             this.sup,
             this.medio,
@@ -79,10 +79,10 @@
             this.p,
             this.fe,
             this.cac});
-            this.dgvChi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.dgvChi.Location = new System.Drawing.Point(212, 98);
-            this.dgvChi.Name = "dgvChi";
-            this.dgvChi.ReadOnly = true;
+            this.dgv_valores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.dgv_valores.Location = new System.Drawing.Point(212, 98);
+            this.dgv_valores.Name = "dgvChi";
+            this.dgv_valores.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,10 +90,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChi.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvChi.RowHeadersWidth = 5;
-            this.dgvChi.Size = new System.Drawing.Size(306, 310);
-            this.dgvChi.TabIndex = 9;
+            this.dgv_valores.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_valores.RowHeadersWidth = 5;
+            this.dgv_valores.Size = new System.Drawing.Size(306, 310);
+            this.dgv_valores.TabIndex = 9;
             // 
             // inf
             // 
@@ -297,12 +297,12 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txt_confianza);
             this.Controls.Add(this.btnProbar);
-            this.Controls.Add(this.dgvChi);
+            this.Controls.Add(this.dgv_valores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmGrafico";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_valores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chFO)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -311,7 +311,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvChi;
+        private System.Windows.Forms.DataGridView dgv_valores;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.MaskedTextBox txt_confianza;

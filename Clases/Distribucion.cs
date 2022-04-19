@@ -22,7 +22,7 @@ namespace Simulacion_TP_3.Clases
         public abstract double?[] ObtenerVariableAleatoria();
         public abstract List<Parametros> ObtenerParametros();
         public double[,] ObtenerIntervalos() => intervalos;
-        public abstract bool CalcularChi(List<Iteracion> variables, int cantInt);
+        public abstract bool Calcular(List<Iteracion> variables, int cantInt);
     }
     [Flags]
     public enum Parametros
