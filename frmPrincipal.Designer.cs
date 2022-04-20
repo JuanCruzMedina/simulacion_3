@@ -93,7 +93,7 @@ namespace Simulacion_TP_3
             this.pSuperior.Location = new System.Drawing.Point(0, 0);
             this.pSuperior.Margin = new System.Windows.Forms.Padding(5);
             this.pSuperior.Name = "pSuperior";
-            this.pSuperior.Size = new System.Drawing.Size(839, 82);
+            this.pSuperior.Size = new System.Drawing.Size(921, 82);
             this.pSuperior.TabIndex = 0;
             // 
             // lblTitulo
@@ -105,10 +105,10 @@ namespace Simulacion_TP_3
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(839, 82);
+            this.lblTitulo.Size = new System.Drawing.Size(921, 82);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Generador de Variables Aleatorias";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pInferior
             // 
@@ -117,10 +117,10 @@ namespace Simulacion_TP_3
             this.pInferior.Controls.Add(this.panel4);
             this.pInferior.Controls.Add(this.panel3);
             this.pInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pInferior.Location = new System.Drawing.Point(0, 387);
+            this.pInferior.Location = new System.Drawing.Point(0, 392);
             this.pInferior.Margin = new System.Windows.Forms.Padding(5);
             this.pInferior.Name = "pInferior";
-            this.pInferior.Size = new System.Drawing.Size(839, 64);
+            this.pInferior.Size = new System.Drawing.Size(921, 64);
             this.pInferior.TabIndex = 1;
             // 
             // label8
@@ -132,17 +132,17 @@ namespace Simulacion_TP_3
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(464, 64);
+            this.label8.Size = new System.Drawing.Size(546, 64);
             this.label8.TabIndex = 4;
             this.label8.Text = "- Juan Cruz Medina             - Lautaro Goyeneceha\r\n- Gabriel Bracamonte        " +
     "  - Alejandro Guanuco\r\n\r\n";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btnGenerarGraficos);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(464, 0);
+            this.panel4.Location = new System.Drawing.Point(546, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(195, 64);
@@ -151,15 +151,16 @@ namespace Simulacion_TP_3
             // btnGenerarGraficos
             // 
             this.btnGenerarGraficos.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGenerarGraficos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGenerarGraficos.Enabled = false;
             this.btnGenerarGraficos.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnGenerarGraficos.FlatAppearance.BorderSize = 2;
             this.btnGenerarGraficos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarGraficos.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnGenerarGraficos.Location = new System.Drawing.Point(5, 14);
+            this.btnGenerarGraficos.Location = new System.Drawing.Point(0, 0);
             this.btnGenerarGraficos.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnGenerarGraficos.Name = "btnGenerarGraficos";
-            this.btnGenerarGraficos.Size = new System.Drawing.Size(179, 33);
+            this.btnGenerarGraficos.Size = new System.Drawing.Size(195, 64);
             this.btnGenerarGraficos.TabIndex = 0;
             this.btnGenerarGraficos.Text = "Generar Gráficos";
             this.btnGenerarGraficos.UseVisualStyleBackColor = false;
@@ -169,7 +170,7 @@ namespace Simulacion_TP_3
             // 
             this.panel3.Controls.Add(this.btnGenerar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(659, 0);
+            this.panel3.Location = new System.Drawing.Point(741, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(180, 64);
@@ -178,14 +179,15 @@ namespace Simulacion_TP_3
             // btnGenerar
             // 
             this.btnGenerar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGenerar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGenerar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnGenerar.FlatAppearance.BorderSize = 2;
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnGenerar.Location = new System.Drawing.Point(5, 14);
+            this.btnGenerar.Location = new System.Drawing.Point(0, 0);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(5);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(164, 33);
+            this.btnGenerar.Size = new System.Drawing.Size(180, 64);
             this.btnGenerar.TabIndex = 0;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -208,8 +210,8 @@ namespace Simulacion_TP_3
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.splitContainer1.Panel2.Controls.Add(this.dgv);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Size = new System.Drawing.Size(839, 305);
-            this.splitContainer1.SplitterDistance = 396;
+            this.splitContainer1.Size = new System.Drawing.Size(921, 310);
+            this.splitContainer1.SplitterDistance = 434;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -229,7 +231,7 @@ namespace Simulacion_TP_3
             this.gbParametros.Margin = new System.Windows.Forms.Padding(5);
             this.gbParametros.Name = "gbParametros";
             this.gbParametros.Padding = new System.Windows.Forms.Padding(5);
-            this.gbParametros.Size = new System.Drawing.Size(396, 305);
+            this.gbParametros.Size = new System.Drawing.Size(434, 310);
             this.gbParametros.TabIndex = 0;
             this.gbParametros.TabStop = false;
             this.gbParametros.Text = "Parámetros";
@@ -243,7 +245,7 @@ namespace Simulacion_TP_3
             this.pVariableN.Location = new System.Drawing.Point(5, 262);
             this.pVariableN.Margin = new System.Windows.Forms.Padding(5);
             this.pVariableN.Name = "pVariableN";
-            this.pVariableN.Size = new System.Drawing.Size(386, 38);
+            this.pVariableN.Size = new System.Drawing.Size(424, 38);
             this.pVariableN.TabIndex = 10;
             // 
             // txtN
@@ -276,7 +278,7 @@ namespace Simulacion_TP_3
             this.pVariableB.Location = new System.Drawing.Point(5, 224);
             this.pVariableB.Margin = new System.Windows.Forms.Padding(5);
             this.pVariableB.Name = "pVariableB";
-            this.pVariableB.Size = new System.Drawing.Size(386, 38);
+            this.pVariableB.Size = new System.Drawing.Size(424, 38);
             this.pVariableB.TabIndex = 9;
             this.pVariableB.Visible = false;
             // 
@@ -310,7 +312,7 @@ namespace Simulacion_TP_3
             this.pVariableA.Location = new System.Drawing.Point(5, 186);
             this.pVariableA.Margin = new System.Windows.Forms.Padding(5);
             this.pVariableA.Name = "pVariableA";
-            this.pVariableA.Size = new System.Drawing.Size(386, 38);
+            this.pVariableA.Size = new System.Drawing.Size(424, 38);
             this.pVariableA.TabIndex = 8;
             this.pVariableA.Visible = false;
             // 
@@ -344,7 +346,7 @@ namespace Simulacion_TP_3
             this.pLambda.Location = new System.Drawing.Point(5, 148);
             this.pLambda.Margin = new System.Windows.Forms.Padding(5);
             this.pLambda.Name = "pLambda";
-            this.pLambda.Size = new System.Drawing.Size(386, 38);
+            this.pLambda.Size = new System.Drawing.Size(424, 38);
             this.pLambda.TabIndex = 0;
             this.pLambda.Visible = false;
             // 
@@ -378,7 +380,7 @@ namespace Simulacion_TP_3
             this.pDesviacionEstandar.Location = new System.Drawing.Point(5, 110);
             this.pDesviacionEstandar.Margin = new System.Windows.Forms.Padding(5);
             this.pDesviacionEstandar.Name = "pDesviacionEstandar";
-            this.pDesviacionEstandar.Size = new System.Drawing.Size(386, 38);
+            this.pDesviacionEstandar.Size = new System.Drawing.Size(424, 38);
             this.pDesviacionEstandar.TabIndex = 6;
             this.pDesviacionEstandar.Visible = false;
             // 
@@ -412,7 +414,7 @@ namespace Simulacion_TP_3
             this.pMedia.Location = new System.Drawing.Point(5, 72);
             this.pMedia.Margin = new System.Windows.Forms.Padding(5);
             this.pMedia.Name = "pMedia";
-            this.pMedia.Size = new System.Drawing.Size(386, 38);
+            this.pMedia.Size = new System.Drawing.Size(424, 38);
             this.pMedia.TabIndex = 5;
             this.pMedia.Visible = false;
             // 
@@ -446,7 +448,7 @@ namespace Simulacion_TP_3
             this.pDistribuciones.Location = new System.Drawing.Point(5, 21);
             this.pDistribuciones.Margin = new System.Windows.Forms.Padding(5);
             this.pDistribuciones.Name = "pDistribuciones";
-            this.pDistribuciones.Size = new System.Drawing.Size(386, 51);
+            this.pDistribuciones.Size = new System.Drawing.Size(424, 51);
             this.pDistribuciones.TabIndex = 4;
             // 
             // cboDistribuciones
@@ -493,7 +495,7 @@ namespace Simulacion_TP_3
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 10;
-            this.dgv.Size = new System.Drawing.Size(442, 305);
+            this.dgv.Size = new System.Drawing.Size(486, 310);
             this.dgv.TabIndex = 0;
             // 
             // indiceDataGridViewTextBoxColumn
@@ -521,7 +523,7 @@ namespace Simulacion_TP_3
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(839, 451);
+            this.ClientSize = new System.Drawing.Size(921, 456);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pInferior);
             this.Controls.Add(this.pSuperior);

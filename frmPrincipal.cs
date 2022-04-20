@@ -77,7 +77,7 @@ namespace Simulacion_TP_3
                 case Distribucion.ExponencialNegativa:
                     if (usarDefault)
                         _distribucion = new ExponencialNegativa(default);
-                    else if (double.TryParse(txtLambda.Text, out double lambda))
+                    else if (double.TryParse(txtLambda.Text, out double lambda) && lambda > 0)
                         _distribucion = new ExponencialNegativa(lambda);
                     else resultado.exito = false;
                     break;
@@ -85,7 +85,9 @@ namespace Simulacion_TP_3
                 case Distribucion.NormalConvolucion:
                     if (usarDefault)
                         _distribucion = new NormalConvolucion(default, default);
-                    else if (double.TryParse(txtMedia.Text, out double media) && double.TryParse(txtDesviacionEstandar.Text, out double desviacionEstandar))
+                    else if (double.TryParse(txtMedia.Text, out double media) 
+                        && double.TryParse(txtDesviacionEstandar.Text, out double desviacionEstandar)
+                        && desviacionEstandar > 0)
                         _distribucion = new NormalConvolucion(media, desviacionEstandar);
                     else resultado.exito = false;
                     break;
@@ -93,7 +95,9 @@ namespace Simulacion_TP_3
                 case Distribucion.NormalMuller:
                     if (usarDefault)
                         _distribucion = new NormalMuller(default, default);
-                    else if (double.TryParse(txtMedia.Text, out double media) && double.TryParse(txtDesviacionEstandar.Text, out double desviacionEstandar))
+                    else if (double.TryParse(txtMedia.Text, out double media) 
+                        && double.TryParse(txtDesviacionEstandar.Text, out double desviacionEstandar)
+                        && desviacionEstandar > 0)
                         _distribucion = new NormalMuller(media, desviacionEstandar);
                     else resultado.exito = false;
                     break;
@@ -101,7 +105,9 @@ namespace Simulacion_TP_3
                 case Distribucion.Uniforme:
                     if (usarDefault)
                         _distribucion = new Uniforme(default, default);
-                    else if (double.TryParse(txtA.Text, out double a) && double.TryParse(txtB.Text, out double b))
+                    else if (double.TryParse(txtA.Text, out double a) 
+                        && double.TryParse(txtB.Text, out double b)
+                        && a < b)
                         _distribucion = new Uniforme(a, b);
                     else resultado.exito = false;
                     break;
@@ -119,8 +125,19 @@ namespace Simulacion_TP_3
         {
             _dataSource = new List<Iteracion>();
             LimpiarGrilla();
-            EstablecerDistribucion(false);
-            _cantidadNumeros = int.TryParse(txtN.Text, out int n) ? n : 0;
+            (bool resultado, string msg) = EstablecerDistribucion(false);
+            if (!resultado)
+            {
+                MessageBox.Show(msg);
+                return;
+            }
+            else if (int.TryParse(txtN.Text, out int n))
+            {
+                MessageBox.Show("El valor de 'n' es invalido.");
+                return;
+            }
+            else _cantidadNumeros = n;
+            
             for (int i = 1; i <= _cantidadNumeros; i++)
             {
                 var vector = _distribucion.ObtenerVariableAleatoria();

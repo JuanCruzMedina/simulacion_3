@@ -11,6 +11,6 @@ namespace Simulacion_TP_3.Interfaces
         int ObtenerDatosEmpiricos();
         double[,] ObtenerIntervalos();
         List<Parametros> ObtenerParametros();
-        bool Calcular(List<Iteracion> variables, int cantInt);
+        void Calcular(List<Iteracion> variables, int cantInt);
     }
 }
