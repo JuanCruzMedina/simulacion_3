@@ -107,7 +107,9 @@ namespace Simulacion_TP_3
                         _distribucion = new Uniforme(default, default);
                     else if (double.TryParse(txtA.Text, out double a) 
                         && double.TryParse(txtB.Text, out double b)
-                        && a < b)
+                        && a < b
+                        && a != 0
+                        && b != 1)
                         _distribucion = new Uniforme(a, b);
                     else resultado.exito = false;
                     break;
@@ -131,7 +133,7 @@ namespace Simulacion_TP_3
                 MessageBox.Show(msg);
                 return;
             }
-            else if (int.TryParse(txtN.Text, out int n))
+            else if (!int.TryParse(txtN.Text, out int n))
             {
                 MessageBox.Show("El valor de 'n' es invalido.");
                 return;
